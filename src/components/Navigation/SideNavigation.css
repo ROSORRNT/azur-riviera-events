@@ -1,0 +1,37 @@
+.side-navigation li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 7px;
+  line-height: 1rem;
+  padding: 0;
+}
+
+.side-navigation a {
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.192);
+  background-color: #ffcb3cee;
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.side-navigation a:hover,
+.side-navigation a:active,
+.side-navigation a.active {
+  background: #2396e2;
+  border-color: #0c3866;
+  color: #0c3866;
+}
+
+.side-navigation a {
+  justify-self: center;
+  text-decoration: none;
+  color: #0c3866;
+}
+
+.side-navigation a:hover {
+  background-color: #2396e2;
+  color: white;
+}

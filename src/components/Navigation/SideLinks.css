@@ -1,0 +1,17 @@
+.links-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list a {
+  line-height: 0.9rem;
+}
+
+.active {
+  background: #ffcb3cee;
+  border-color: #0c3866;
+  color: #0c3866;
+}

@@ -1,0 +1,15 @@
+.foot-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+  width: 90%;
+  margin: 0.03rem;
+  border: 0.05rem solid white;
+}
+
+.article:hover {
+  background-color: white;
+  color: black;
+}
