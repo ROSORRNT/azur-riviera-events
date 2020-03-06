@@ -29,7 +29,7 @@ html {
 }
 body {
   margin: 0;
-  background: var(--bodyBack);
+  background: var(--primaryBlue);
 }
 
 h1 {
