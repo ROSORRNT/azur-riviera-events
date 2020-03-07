@@ -4,9 +4,11 @@ import { FaHandsHelping, FaGlobeAmericas, FaCommentDots } from "react-icons/fa"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
+import Banner from "../components/UIElements/Banner"
+import StyledHero from "../components/UIElements/StyledHero"
 import Card from "../components/UIElements/Card"
 
-const Enterprises = () => {
+export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
@@ -27,8 +29,17 @@ const Enterprises = () => {
   return (
     <React.Fragment>
       <MainNavigation className="main-header" />
+      <StyledHero img={data.seminarBcg.childImageSharp.fluid}>
+        <Banner
+          title="évènements d'entreprise"
+          info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, corrupti?"
+        >
+          <Link to="/entreprises#seminaires" className="button">
+            Voir plus
+          </Link>
+        </Banner>
+      </StyledHero>
       <main className="container">
-        <h1>ÉVÈNEMENTS ENTREPRISES</h1>
         <br />
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
@@ -202,4 +213,14 @@ const Enterprises = () => {
   )
 }
 
-export default Enterprises
+export const query = graphql`
+  {
+    seminarBcg: file(relativePath: { eq: "seminarB.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

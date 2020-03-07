@@ -4,8 +4,11 @@ import { Link } from "gatsby"
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
 import Card from "../components/UIElements/Card"
+import Banner from "../components/UIElements/Banner"
+import StyledHero from "../components/UIElements/StyledHero"
+import { graphql } from "gatsby"
 
-const Outdoor = () => {
+export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
@@ -25,8 +28,17 @@ const Outdoor = () => {
   return (
     <React.Fragment>
       <MainNavigation className="main-header" />
+      <StyledHero img={data.defaultBcg.childImageSharp.fluid}>
+        <Banner
+          title="Voyage et Découvertes"
+          info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, corrupti?"
+        >
+          <Link to="/outdoor#randonees-parcs" className="button">
+            Voir plus
+          </Link>
+        </Banner>
+      </StyledHero>
       <main className="container">
-        <h1>VOYAGE ET DÉCOUVERTES</h1>
         <br />
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
@@ -200,4 +212,14 @@ const Outdoor = () => {
   )
 }
 
-export default Outdoor
+export const query = graphql`
+  {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

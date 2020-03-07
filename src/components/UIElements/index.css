@@ -61,6 +61,10 @@ ul {
   grid-gap: 2rem;
 }
 
+.tl-edges {
+  overflow: visible;
+}
+
 .grid-container aside {
   justify-self: center;
   position: sticky;
@@ -191,7 +195,6 @@ ul {
   border: 2px solid #424242;
   border-radius: 50%;
   margin: auto;
-  /* padding: 1.5rem; */
 }
 
 .key-feature__image > img {
@@ -274,6 +277,7 @@ ul {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .plan--highlighted__enterprises button {

@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import "./NavLinks.css"
 
@@ -7,29 +8,29 @@ const NavLinks = () => {
   const contentLinks = (
     <React.Fragment>
       <li>
-        <Link to="/entreprises" activeClassName="active">
-          Évènement entreprises
-        </Link>
+        <AniLink fade to="/entreprises" activeClassName="active">
+          Évènements d'entreprise
+        </AniLink>
       </li>
       <li>
-        <Link to="/teambuilding" activeClassName="active">
+        <AniLink fade to="/teambuilding" activeClassName="active">
           Cohésion d'équipe
-        </Link>
+        </AniLink>
       </li>
       <li>
-        <Link to="/outdoor" activeClassName="active">
+        <AniLink fade to="/outdoor" activeClassName="active">
           Voyage et découvertes
-        </Link>
+        </AniLink>
       </li>
       <li>
-        <Link to="/about" activeClassName="active">
+        <AniLink fade to="/about" activeClassName="active">
           Points Forts
-        </Link>
+        </AniLink>
       </li>
       <li>
-        <Link to="/contact" activeClassName="active">
+        <AniLink fade to="/contact" activeClassName="active">
           Contact
-        </Link>
+        </AniLink>
       </li>
     </React.Fragment>
   )

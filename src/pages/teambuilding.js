@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
+import Banner from "../components/UIElements/Banner"
+import StyledHero from "../components/UIElements/StyledHero"
 import Card from "../components/UIElements/Card"
 
-const TeamBuilding = () => {
+export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
@@ -16,8 +18,17 @@ const TeamBuilding = () => {
   return (
     <React.Fragment>
       <MainNavigation className="main-header" />
+      <StyledHero img={data.teambuildingBcg.childImageSharp.fluid}>
+        <Banner
+          title="ÉVÈNEMENTS COHÉSION D'ÉQUIPE"
+          info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, corrupti?"
+        >
+          <Link to="/teambuilding#sport-culture" className="button">
+            Voir plus
+          </Link>
+        </Banner>
+      </StyledHero>
       <main className="container">
-        <h1>ÉVÈNEMENTS COHÉSION D'ÉQUIPE</h1>
         <br />
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
@@ -86,4 +97,14 @@ const TeamBuilding = () => {
   )
 }
 
-export default TeamBuilding
+export const query = graphql`
+  {
+    teambuildingBcg: file(relativePath: { eq: "team-building.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
