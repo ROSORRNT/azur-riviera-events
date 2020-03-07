@@ -1,12 +1,34 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
+import Img from "gatsby-image"
 import MainNavigation from "../components/Navigation/MainNavigation"
-
-import "../components/UIElements/index.css"
 import Footer from "../components/UIElements/Footer"
 import Card from "../components/UIElements/Card"
 
+import "../components/UIElements/index.css"
+
+const getImages = graphql`
+  query Images {
+    fixed: file(relativePath: { eq: "formulaOne.jpeg" }) {
+      childImageSharp {
+        fixed(width: 150, height: 150) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    fluid: file(relativePath: { eq: "formulaOne.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
+
 const IndexPage = () => {
+  const data = useStaticQuery(getImages)
   return (
     <React.Fragment>
       <MainNavigation />
@@ -82,7 +104,7 @@ const IndexPage = () => {
               <h1 className="plan__title--dark">Cohésion d’équipe</h1>
               <h2 className="plan__annotation">
                 {" "}
-                Sport & <br />
+                Sport et <br />
                 Culture{" "}
               </h2>
               <h3>Divertir, Fédérer, Sensibiliser vos équipes .</h3>
@@ -144,30 +166,58 @@ const IndexPage = () => {
           <h1 className="section-title">NOS ÉVÈNEMENTS PERSONNALISÉS</h1>
           <ul className="key-feature__list">
             <li className="key-feature">
-              <div className="key-feature__image"></div>
-              <p className="key-feature__description">Sport & Culture</p>
+              <div className="key-feature__image">
+                <Img
+                  style={{ borderRadius: "50%" }}
+                  fluid={data.fluid.childImageSharp.fluid}
+                />
+              </div>
+              <p className="key-feature__description">Sport et Culture</p>
             </li>
             <li className="key-feature">
-              <div className="key-feature__image"></div>
+              <div className="key-feature__image">
+                <Img
+                  style={{ borderRadius: "50%" }}
+                  fluid={data.fluid.childImageSharp.fluid}
+                />
+              </div>
               <p className="key-feature__description">Séjours entreprises</p>
             </li>
             <li className="key-feature">
-              <div className="key-feature__image"></div>
+              <div className="key-feature__image">
+                <Img
+                  style={{ borderRadius: "50%" }}
+                  fluid={data.fluid.childImageSharp.fluid}
+                />
+              </div>
               <p className="key-feature__description">Comité d'entreprise</p>
             </li>
             <li className="key-feature">
-              <div className="key-feature__image"></div>
+              <div className="key-feature__image">
+                <Img
+                  style={{ borderRadius: "50%" }}
+                  fluid={data.fluid.childImageSharp.fluid}
+                />
+              </div>
               <p className="key-feature__description">
                 Découvertes Culturelles
               </p>
             </li>
             <li className="key-feature">
-              <div className="key-feature__image"></div>
+              <div className="key-feature__image">
+                <Img
+                  style={{ borderRadius: "50%" }}
+                  fluid={data.fluid.childImageSharp.fluid}
+                />
+              </div>
               <p className="key-feature__description">Activités Sportives</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                {/* <img src={sportCultureImg} /> */}
+                <Img
+                  style={{ borderRadius: "50%" }}
+                  fluid={data.fluid.childImageSharp.fluid}
+                />
               </div>
               <p className="key-feature__description">Yatching</p>
             </li>

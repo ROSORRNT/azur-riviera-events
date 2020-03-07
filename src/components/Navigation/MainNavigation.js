@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import logoHome from "../../images/logoAzurRivieraHome.jpg"
+import logoHome from "../../images/logos/logoAzurRivieraHome.jpg"
 
 import MainHeader from "./MainHeader"
 import NavLinks from "./NavLinks"
@@ -11,24 +11,6 @@ import "./MainNavigation.css"
 
 const MainNavigation = () => {
   const [drawIsOpen, setDrawIsOpen] = useState(false)
-
-  // let logo
-
-  // useEffect(() => {
-  //   console.log(window.location.pathname)
-  //   switch (window.location.pathname) {
-  //     case "/entreprises":
-  //       logo = logoEntreprises
-
-  //     case "/teambuilding":
-  //       logo = logoEntreprises
-
-  //     case "/outdoor":
-  //       logo = logoNature
-  //     default:
-  //       logo = logoHome
-  //   }
-  // }, [])
 
   const openDrawerHandler = () => setDrawIsOpen(true)
 

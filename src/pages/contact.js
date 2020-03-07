@@ -9,6 +9,7 @@ const contact = () => {
       <MainNavigation />
       <section className="container">
         <h1>CONTACT</h1>
+
         <hr />
         <p>Le meilleur moyen de nous contacter!</p>
       </section>
