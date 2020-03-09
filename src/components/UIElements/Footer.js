@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="foot-wrapper">
         <section>
           <nav>
-            <h3 style={{ textAlign: "center" }}>Articles Récents</h3>
+            {/* <h3 style={{ textAlign: "center" }}>Articles Récents</h3> */}
             <ul className="main-footer__links">
               <li className="main-footer__link article">
                 La motivation, source de bien-être !
@@ -41,22 +41,20 @@ const Footer = () => {
           </nav>
         </section>
         <section>
-          <h3 style={{ textAlign: "center" }}>
+          {/* <h3 style={{ textAlign: "center" }}>
             Inscrivez-vous à notre Newsletter
-          </h3>
+          </h3> */}
         </section>
         <section>
           <nav>
-            <h3 style={{ textAlign: "center" }}>AZUR RIVIERA EVENTS</h3>
+            {/* <h3 style={{ textAlign: "center" }}>AZUR RIVIERA EVENTS</h3> */}
             <ul className="main-footer__links">
               <li className="main-footer__link">
                 <FaFacebookSquare />{" "}
-                <a href="https://www.facebook.com/azur.rivieraevents">
-                  Notre FaceBook
-                </a>
+                <a href="https://www.facebook.com/azur.rivieraevents"></a>
               </li>
               <li className="main-footer__link">
-                <FaLinkedin /> <a href="#">Notre Linkedin</a>
+                <FaLinkedin /> <a href="#"></a>
               </li>{" "}
               <li style={{ paddingTop: ".8rem" }} className="main-footer__link">
                 Tél : ++ 33 6 60 61 33 99 <br /> Mail :

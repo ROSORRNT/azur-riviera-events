@@ -6,7 +6,15 @@
   padding: 0.5rem;
   overflow: hidden;
   background: white;
-  color: #0c3866;
+  color: var(--fontColor);
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card h2 {
+  font-size: 1rem;
 }
 
 /* .card:hover {
