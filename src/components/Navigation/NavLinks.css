@@ -2,13 +2,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  /* padding-right: 15%; */
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 430px) {
+  .nav-links {
+    font-size: 0.8rem;
+  }
 }
 
 .nav-links li {
@@ -48,12 +53,6 @@
   outline: none;
 }
 
-.nav-links button:hover,
-.nav-links button:active {
-  background: #e4002b;
-  /* color: white; */
-}
-
 @media (min-width: 1200px) {
   .nav-links {
     flex-direction: row;
@@ -72,11 +71,5 @@
     border: 1px solid white;
     color: white;
     background: transparent;
-  }
-
-  .nav-links button:hover,
-  .nav-links button:active {
-    background: #e4002b;
-    color: white;
   }
 }

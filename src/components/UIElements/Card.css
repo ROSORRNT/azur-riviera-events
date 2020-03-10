@@ -10,11 +10,19 @@
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .card h2 {
   font-size: 1rem;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #4e4342;
 }
 
 /* .card:hover {

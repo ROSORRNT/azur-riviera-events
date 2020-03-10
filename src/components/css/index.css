@@ -10,10 +10,12 @@
   --lightOrange: #ff9933;
   --primaryYellow: #ffcb3cee;
   --fontColor: rgb(102, 102, 102);
+  --fontColorDark: rgb(80, 80, 80);
   --bodyBack: #f6f1d7;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
+  --darkGrey: #080808;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -45,15 +47,23 @@ ul {
 
 .container {
   width: calc(100% - 40px);
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 20% 70%;
-  grid-gap: 2rem;
+  grid-template-columns: 20% 76%;
+  grid-gap: 1rem;
+}
+
+@media (max-width: 650px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 34% 64%;
+    grid-gap: 1.1rem;
+  }
 }
 
 .tl-edges {
@@ -195,6 +205,13 @@ ul {
   padding: 1rem;
 }
 
+.key-feature p {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#key-feature h1 {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 #key-features .section-title {
   color: white;
   margin: 2rem;
@@ -209,8 +226,8 @@ ul {
 
 .key-feature__image {
   background: #ffcede;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: 2px solid #424242;
   border-radius: 50%;
   margin: auto;
@@ -221,6 +238,13 @@ ul {
   font-weight: bold;
   color: white;
   font-size: 1.2rem;
+}
+
+@media (max-width: 920px) {
+  .key-feature__image {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -254,6 +278,8 @@ ul {
 
 .main-footer__link {
   margin: 0.5rem 0;
+  width: 95%;
+  border: 0.04rem solid white;
 }
 
 .main-footer__link a {
@@ -261,9 +287,11 @@ ul {
   text-decoration: none;
 }
 
-.main-footer__link a:hover,
-.main-footer__link a:active {
-  color: #ccc;
+.main-footer__link:hover,
+.main-footer__link:active {
+  color: var(--mainBlack);
+  background-color: white;
+  cursor: pointer;
 }
 
 .slide-in-left-enter {
@@ -307,7 +335,7 @@ ul {
   font: inherit;
   border: 1.5px solid #0e4f1f;
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: 3px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
@@ -325,14 +353,23 @@ ul {
 
 .button:hover,
 .button:active {
-  background: white;
-  color: #222;
+  background-color: white;
+  color: var(--darkBlue);
+  text-decoration: none;
 }
 
 .button:focus {
   outline: none;
 }
+.button a {
+  text-decoration: none;
+  color: white;
+}
 
+.button button:hover,
+.button a:hover {
+  color: var(--darkBlue);
+}
 @media (min-width: 40rem) {
   .main-footer__link {
     display: inline-block;

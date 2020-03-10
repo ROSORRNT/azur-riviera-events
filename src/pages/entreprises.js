@@ -32,7 +32,7 @@ export default ({ data }) => {
       <StyledHero img={data.seminarBcg.childImageSharp.fluid}>
         <Banner
           title="évènements d'entreprise"
-          info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, corrupti?"
+          info="Une large gamme d’activités, et un interlocuteur unique !"
         >
           <Link to="/entreprises#seminaires" className="button">
             Voir plus

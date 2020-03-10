@@ -20,8 +20,9 @@ export default ({ data }) => {
       <MainNavigation className="main-header" />
       <StyledHero img={data.teambuildingBcg.childImageSharp.fluid}>
         <Banner
+          color={"var(--lightBlue)"}
           title="ÉVÈNEMENTS COHÉSION D'ÉQUIPE"
-          info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, corrupti?"
+          info="Pour divertir, fédérer, et sensibiliser vos équipes."
         >
           <Link to="/teambuilding#sport-culture" className="button">
             Voir plus
@@ -99,7 +100,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    teambuildingBcg: file(relativePath: { eq: "team-building.jpg" }) {
+    teambuildingBcg: file(relativePath: { eq: "painting.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp

@@ -1,22 +1,41 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FaRProject } from "react-icons/fa"
+import links from "../../constants/links"
+import socialIcons from "../../constants/social-icons"
+import styles from "../css/footer.module.css"
+import "../UIElements/Contact.css"
 
-import "./Footer.css"
-import {
-  FaRegNewspaper,
-  FaHotjar,
-  FaMailBulk,
-  FaFacebookSquare,
-  FaLinkedin,
-} from "react-icons/fa"
-
-const Footer = () => {
+const NewFooter = () => {
   return (
-    <footer className="main-footer">
-      <div className="foot-wrapper">
+    <footer className={styles.footer}>
+      <div className={styles.gridFooter}>
         <section>
+          <div className={styles.links}>
+            {links.map((item, index) => {
+              return (
+                <Link key={index} to={item.path}>
+                  {item.text}
+                </Link>
+              )
+            })}
+          </div>
+          <div className={styles.icons}>
+            {socialIcons.map((item, index) => {
+              return (
+                <a key={index} href={item.url} target="_blank">
+                  {item.icon}
+                </a>
+              )
+            })}
+          </div>
+          <div className={styles.copyright}>
+            Copyright Azur Riviera Prestations 2020®
+          </div>
+        </section>
+        <section>
+          <h3>ARTICLES RECENTS</h3>
           <nav>
-            {/* <h3 style={{ textAlign: "center" }}>Articles Récents</h3> */}
             <ul className="main-footer__links">
               <li className="main-footer__link article">
                 La motivation, source de bien-être !
@@ -33,52 +52,45 @@ const Footer = () => {
               <li className="main-footer__link article">
                 Conférence et Coupe du monde Féminin 2019
               </li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <div className="center">
+            <h3>NEWSLETTER</h3>
+            <form
+              action="https://formspree.io/romainsorrnti@gmail.com"
+              method="POST"
+              className="center"
+            >
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="form-control"
+                  placeholder="Jean Paulhan"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="form-control"
+                  placeholder="exemple@exemple.com"
+                />
+              </div>
 
-              <li className="main-footer__link">
-                Copyright Azur Riviera Prestations 2020®
-              </li>
-            </ul>
-          </nav>
-        </section>
-        <section>
-          {/* <h3 style={{ textAlign: "center" }}>
-            Inscrivez-vous à notre Newsletter
-          </h3> */}
-        </section>
-        <section>
-          <nav>
-            {/* <h3 style={{ textAlign: "center" }}>AZUR RIVIERA EVENTS</h3> */}
-            <ul className="main-footer__links">
-              <li className="main-footer__link">
-                <FaFacebookSquare />{" "}
-                <a href="https://www.facebook.com/azur.rivieraevents"></a>
-              </li>
-              <li className="main-footer__link">
-                <FaLinkedin /> <a href="#"></a>
-              </li>{" "}
-              <li style={{ paddingTop: ".8rem" }} className="main-footer__link">
-                Tél : ++ 33 6 60 61 33 99 <br /> Mail :
-                patricia@azur-riviera-events.com
-              </li>
-              <li className="main-footer__link">
-                {" "}
-                Patricia Le Bras 45, chemin Collet Baraya 06670 COLOMARS
-              </li>
-              <li className="main-footer__link">
-                <FaRegNewspaper /> <Link to="/news">News</Link>{" "}
-              </li>
-              <li className="main-footer__link">
-                <FaHotjar /> <Link to="/about">Points Forts</Link>
-              </li>
-              <li className="main-footer__link">
-                <FaMailBulk /> <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
+              <div>
+                <input type="submit" value="envoyer" className="submit" />
+              </div>
+            </form>
+          </div>
         </section>
       </div>
     </footer>
   )
 }
 
-export default Footer
+export default NewFooter

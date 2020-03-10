@@ -31,7 +31,7 @@ export default ({ data }) => {
       <StyledHero img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
           title="Voyage et Découvertes"
-          info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, corrupti?"
+          info="Voyages et séjours sur la Côte d’Azur."
         >
           <Link to="/outdoor#randonees-parcs" className="button">
             Voir plus
@@ -214,7 +214,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    defaultBcg: file(relativePath: { eq: "voyage.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp

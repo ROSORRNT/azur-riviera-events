@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Title from "./../UIElements/Title"
 import MainNavigation from "../Navigation/MainNavigation"
-import Footer from "../UIElements/Footer"
 import Card from "../UIElements/Card"
 import styles from "./../css/about.module.css"
-import NewFooter from "../UIElements/NewFooter"
+import Footer from "../UIElements/Footer"
 
 const getImages = graphql`
   query Images {
@@ -19,6 +19,27 @@ const getImages = graphql`
       }
     }
     fluid: file(relativePath: { eq: "formulaOne.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    sejoursEntreprise: file(relativePath: { eq: "sejours-entreprise.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    comiteEntreprise: file(relativePath: { eq: "comite.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    culture: file(relativePath: { eq: "culture.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -115,7 +136,10 @@ const Layout = () => {
                 </li>
               </ul>
               <div>
-                <button className="button entreprises">En savoir plus.</button>
+                <button className="button entreprises">
+                  {" "}
+                  <Link to="/entreprises"> En savoir plus.</Link>
+                </button>
               </div>
             </article>
 
@@ -146,7 +170,9 @@ const Layout = () => {
                 </li>
               </ul>
               <div>
-                <button className="button">En savoir plus.</button>
+                <button className="button">
+                  <Link to="/teambuilding"> En savoir plus.</Link>
+                </button>
               </div>
             </article>
 
@@ -175,7 +201,9 @@ const Layout = () => {
                 </li>
               </ul>
               <div>
-                <button className="button">En savoir plus.</button>
+                <button className="button">
+                  <Link to="/outdoor"> En savoir plus.</Link>
+                </button>
               </div>
             </article>
           </div>
@@ -197,7 +225,7 @@ const Layout = () => {
               <div className="key-feature__image">
                 <Img
                   style={{ borderRadius: "50%" }}
-                  fluid={data.fluid.childImageSharp.fluid}
+                  fluid={data.sejoursEntreprise.childImageSharp.fluid}
                 />
               </div>
               <p className="key-feature__description">Séjours entreprises</p>
@@ -206,7 +234,7 @@ const Layout = () => {
               <div className="key-feature__image">
                 <Img
                   style={{ borderRadius: "50%" }}
-                  fluid={data.fluid.childImageSharp.fluid}
+                  fluid={data.comiteEntreprise.childImageSharp.fluid}
                 />
               </div>
               <p className="key-feature__description">Comité d'entreprise</p>
@@ -215,7 +243,7 @@ const Layout = () => {
               <div className="key-feature__image">
                 <Img
                   style={{ borderRadius: "50%" }}
-                  fluid={data.fluid.childImageSharp.fluid}
+                  fluid={data.culture.childImageSharp.fluid}
                 />
               </div>
               <p className="key-feature__description">
@@ -243,8 +271,8 @@ const Layout = () => {
           </ul>
         </section>
       </main>
-      <NewFooter />
-      {/* <Footer /> */}
+
+      <Footer />
     </React.Fragment>
   )
 }
