@@ -102,7 +102,17 @@ ul {
   text-align: center;
 }
 
-.plan {
+.plan__list h1 {
+  text-shadow: var(--darkBlue) -1px 0px, var(--darkBlue) 0px 1px,
+    var(--darkBlue) 1px 0px, var(--darkBlue) 0px -1px;
+}
+
+.plan__list h2 {
+  text-shadow: var(--mainBlack) -0.5 0px, var(--mainBlack) 0px 0.5,
+    var(--mainBlack) 0.5 0px, var(--mainBlack) 0px -0.5;
+}
+
+.plan h2 {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
@@ -116,8 +126,13 @@ ul {
 
 .plan--highlighted__enterprises {
   background: var(--primaryBlue);
-  color: white;
+  color: var(--offWhite);
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.plan--highlighted__enterprises h2 {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .plan--highlighted__teambuilding {
@@ -128,13 +143,19 @@ ul {
 
 .plan--highlighted__outdoor {
   background: var(--primaryGreen);
-  color: white;
+  color: var(--offWhite);
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.plan--highlighted__outdoor h2 {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .plan__annotation {
   background: white;
   color: #858585;
+
   padding: 0.5rem;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
@@ -164,6 +185,7 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 1.2rem;
 }
 
 .plan__feature {
@@ -183,7 +205,7 @@ ul {
   }
 
   .plan {
-    width: 30%;
+    width: 40%;
     min-width: 10rem;
     max-width: 25rem;
     display: flex;
@@ -329,18 +351,6 @@ ul {
   text-align: justify;
 }
 
-.button {
-  background: #0e4f1f;
-  color: white;
-  font: inherit;
-  border: 1.5px solid #0e4f1f;
-  padding: 0.5rem;
-  border-radius: 3px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .plan--highlighted__enterprises button {
   background: var(--darkBlue);
   border: 1.5px solid var(--darkBlue);
@@ -351,6 +361,18 @@ ul {
   border: 1.5px solid var(--primaryOrange);
 }
 
+.button {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
 .button:hover,
 .button:active {
   background-color: white;

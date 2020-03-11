@@ -8,6 +8,7 @@ import MainNavigation from "../Navigation/MainNavigation"
 import Card from "../UIElements/Card"
 import styles from "./../css/about.module.css"
 import Footer from "../UIElements/Footer"
+import { FaBullseye } from "react-icons/fa"
 
 const getImages = graphql`
   query Images {
@@ -86,7 +87,7 @@ const Layout = () => {
             </article>{" "}
             <article className={styles.aboutInfo}>
               <Card>
-                <p style={{ width: "90%", textAlign: "center" }}>
+                <p style={{ width: "90%", textAlign: "justify" }}>
                   Notre métier est de rendre vos{" "}
                   <strong>événements uniques</strong>, personnalisés et de les
                   concevoir pour qu’ils soient{" "}
@@ -97,7 +98,7 @@ const Layout = () => {
                   vous offre un service <strong>sur-mesure</strong> et sans
                   intermédiaires.{" "}
                 </p>
-                <p style={{ width: "90%", textAlign: "center" }}>
+                <p style={{ width: "90%", textAlign: "justify" }}>
                   {" "}
                   Nous pouvons aussi nous charger de votre{" "}
                   <strong>communication digitale</strong>
@@ -107,7 +108,7 @@ const Layout = () => {
                   <strong> conseils et assistance</strong>, soit à vos côtés
                   pour qu’ainsi vous puissiez vous sentir serein le jour J.{" "}
                 </p>
-                <p style={{ width: "90%", textAlign: "center" }}>
+                <p style={{ width: "90%", textAlign: "justify" }}>
                   {" "}
                   Nous vous garantissons des prestations de qualité grâce aux
                   engagements que nous avons pris avec nos prestataires qui ont
@@ -118,10 +119,14 @@ const Layout = () => {
             </article>
           </div>
         </section>
-        <section className="container grid-container__presa"></section>
 
         <section id="plans">
-          <h1 className="section-title">NOS SERVICES SUR MESURE</h1>
+          <h1
+            style={{ marginTop: "2.5rem", marginBottom: "2rem" }}
+            className="section-title"
+          >
+            NOS SERVICES SUR MESURE
+          </h1>
           <div className="plan__list">
             <article className="plan plan--highlighted__enterprises">
               <h1 className="plan__title--light">Évènements d’entreprises</h1>
@@ -133,20 +138,20 @@ const Layout = () => {
               <h3>Nous sommes à vos côtés pour une organisation optimale! </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  - De la conception à la réalistation:
+                  <FaBullseye /> De la conception à la réalistation
                 </li>
                 <li className="plan__feature">
-                  - Pour vos{" "}
+                  <FaBullseye /> Pour vos{" "}
                   <strong> séminaires, conférences et team-building</strong>
                 </li>
                 <li className="plan__feature">
-                  - Pour vos{" "}
+                  <FaBullseye /> Pour vos{" "}
                   <strong> voyages d’affaires en France et à l’étranger</strong>
                 </li>
                 <li className="plan__feature">
-                  - Un réseau de partenaires et fournisseurs rigoureusement
-                  sélectionnés en matière de sécurité, d’éthique, de respect des
-                  coûts et des délais.
+                  <FaBullseye /> Un réseau de partenaires et fournisseurs
+                  rigoureusement sélectionnés en matière de sécurité, d’éthique,
+                  de respect des coûts et des délais.
                 </li>
               </ul>
               <div>
@@ -158,29 +163,37 @@ const Layout = () => {
             </article>
 
             <article className="plan plan--highlighted__teambuilding">
-              <h1 className="plan__title--dark">Cohésion d’équipe</h1>
+              <h1
+                style={{
+                  textShadow:
+                    "white -1px 0px, white 0px 1px, white 1px 0px, white 0px -1px",
+                }}
+                className="plan__title--dark"
+              >
+                Cohésion d’équipe
+              </h1>
               <h2 className="plan__annotation">
                 {" "}
                 Sport et <br />
                 Culture{" "}
               </h2>
-              <h3>Divertir, Fédérer, Sensibiliser vos équipes .</h3>
+              <h3>Divertir, Fédérer, Sensibiliser vos équipes.</h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  - Des activités conçues spécialement pour les entreprises de
-                  toutes tailles.{" "}
+                  <FaBullseye /> Des activités conçues spécialement pour les
+                  entreprises de toutes tailles.{" "}
                 </li>
                 <li className="plan__feature">
-                  - Nous nous inscrivons dans une démarche solidaire et limitant
-                  l’impact sur l’environnement.
+                  <FaBullseye /> Nous nous inscrivons dans une démarche
+                  solidaire et limitant l’impact sur l’environnement.
                 </li>
                 <li className="plan__feature">
-                  - Nous mettons en avant la culture, le dépassement de soi, la
-                  convivialité, le partage.
+                  <FaBullseye /> Nous mettons en avant la culture, le
+                  dépassement de soi, la convivialité, le partage.
                 </li>
                 <li className="plan__feature">
-                  - Continuez à travers ces animations à véhiculer les valeurs
-                  fortes de votre entreprise.
+                  <FaBullseye /> Continuez à travers ces animations à véhiculer
+                  les valeurs fortes de votre entreprise.
                 </li>
               </ul>
               <div>
@@ -202,16 +215,17 @@ const Layout = () => {
               <h3>Voyages et séjours sur la Côte d’Azur.</h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  - Organisez
-                  <strong>vos voyages et séjours</strong> sur la Côte d’Azur{" "}
+                  <FaBullseye /> Organisez
+                  <strong> vos voyages et séjours </strong> sur la Côte d’Azur{" "}
                   pour partir à la découverte d’une région pleine de surprises!
                 </li>
                 <li className="plan__feature">
-                  - Rencontres avec des passionnés au savoir-faire millénaire,
-                  apprentissage des cultures et tradition…
+                  <FaBullseye /> Rencontres avec des passionnés au savoir-faire
+                  millénaire, apprentissage des cultures et tradition…
                 </li>
                 <li className="plan__feature">
-                  Attendez-vous à vivre des moments inoubliables !
+                  <FaBullseye /> Attendez-vous à vivre des moments inoubliables
+                  !
                 </li>
               </ul>
               <div>
@@ -223,7 +237,7 @@ const Layout = () => {
           </div>
         </section>
 
-        <section id="key-features">
+        <section style={{ marginBottom: "4.5rem" }} id="key-features">
           <h1 className="section-title">NOS ÉVÈNEMENTS PERSONNALISÉS</h1>
           <ul className="key-feature__list">
             <li className="key-feature">
