@@ -32,7 +32,14 @@ const getImages = graphql`
         }
       }
     }
-    comiteEntreprise: file(relativePath: { eq: "comite.png" }) {
+    comiteEntreprise: file(relativePath: { eq: "team.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    sport: file(relativePath: { eq: "sport.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -40,6 +47,13 @@ const getImages = graphql`
       }
     }
     culture: file(relativePath: { eq: "culture.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    yatching: file(relativePath: { eq: "yatching.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -254,7 +268,7 @@ const Layout = () => {
               <div className="key-feature__image">
                 <Img
                   style={{ borderRadius: "50%" }}
-                  fluid={data.fluid.childImageSharp.fluid}
+                  fluid={data.sport.childImageSharp.fluid}
                 />
               </div>
               <p className="key-feature__description">Activités Sportives</p>
@@ -263,7 +277,7 @@ const Layout = () => {
               <div className="key-feature__image">
                 <Img
                   style={{ borderRadius: "50%" }}
-                  fluid={data.fluid.childImageSharp.fluid}
+                  fluid={data.yatching.childImageSharp.fluid}
                 />
               </div>
               <p className="key-feature__description">Yatching</p>
