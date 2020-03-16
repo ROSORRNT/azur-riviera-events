@@ -1,7 +1,7 @@
 import React from "react"
 
 import styles from "./../css/contact.module.css"
-
+import "../UIElements/Contact.css"
 const Contact = ({ children }) => {
   return (
     <section>
@@ -50,7 +50,7 @@ const Contact = ({ children }) => {
             />
           </div>
           <div>
-            <input type="submit" value="envoyer" className={styles.submit} />
+            <input type="submit" value="envoyer" className="submit" />
           </div>
         </form>
       </div>

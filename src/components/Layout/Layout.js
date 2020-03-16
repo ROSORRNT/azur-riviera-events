@@ -8,7 +8,6 @@ import MainNavigation from "../Navigation/MainNavigation"
 import Card from "../UIElements/Card"
 import styles from "./../css/about.module.css"
 import Footer from "../UIElements/Footer"
-import { FaBullseye } from "react-icons/fa"
 
 const getImages = graphql`
   query Images {
@@ -129,7 +128,7 @@ const Layout = () => {
           </h1>
           <div className="plan__list">
             <article className="plan plan--highlighted__enterprises">
-              <h1 className="plan__title--light">Évènements d’entreprises</h1>
+              <h1 className="plan__title--dark">Évènements d’entreprises</h1>
               <h2 className="plan__annotation">
                 Séminaires Conférences <br />
                 Comité d'entreprise <br />
@@ -138,20 +137,20 @@ const Layout = () => {
               <h3>Nous sommes à vos côtés pour une organisation optimale! </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  <FaBullseye /> De la conception à la réalistation
+                  De la conception à la réalistation
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Pour vos{" "}
+                  Pour vos{" "}
                   <strong> séminaires, conférences et team-building</strong>
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Pour vos{" "}
+                  Pour vos{" "}
                   <strong> voyages d’affaires en France et à l’étranger</strong>
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Un réseau de partenaires et fournisseurs
-                  rigoureusement sélectionnés en matière de sécurité, d’éthique,
-                  de respect des coûts et des délais.
+                  Un réseau de partenaires et fournisseurs rigoureusement
+                  sélectionnés en matière de sécurité, d’éthique, de respect des
+                  coûts et des délais.
                 </li>
               </ul>
               <div>
@@ -163,15 +162,7 @@ const Layout = () => {
             </article>
 
             <article className="plan plan--highlighted__teambuilding">
-              <h1
-                style={{
-                  textShadow:
-                    "white -1px 0px, white 0px 1px, white 1px 0px, white 0px -1px",
-                }}
-                className="plan__title--dark"
-              >
-                Cohésion d’équipe
-              </h1>
+              <h1 className="plan__title--dark">Cohésion d’équipe</h1>
               <h2 className="plan__annotation">
                 {" "}
                 Sport et <br />
@@ -180,20 +171,20 @@ const Layout = () => {
               <h3>Divertir, Fédérer, Sensibiliser vos équipes.</h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  <FaBullseye /> Des activités conçues spécialement pour les
-                  entreprises de toutes tailles.{" "}
+                  Des activités conçues spécialement pour les entreprises de
+                  toutes tailles.{" "}
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Nous nous inscrivons dans une démarche
-                  solidaire et limitant l’impact sur l’environnement.
+                  Nous nous inscrivons dans une démarche solidaire et limitant
+                  l’impact sur l’environnement.
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Nous mettons en avant la culture, le
-                  dépassement de soi, la convivialité, le partage.
+                  Nous mettons en avant la culture, le dépassement de soi, la
+                  convivialité, le partage.
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Continuez à travers ces animations à véhiculer
-                  les valeurs fortes de votre entreprise.
+                  Continuez à travers ces animations à véhiculer les valeurs
+                  fortes de votre entreprise.
                 </li>
               </ul>
               <div>
@@ -204,7 +195,7 @@ const Layout = () => {
             </article>
 
             <article className="plan plan--highlighted__outdoor">
-              <h1 className="plan__title--light">
+              <h1 className="plan__title--dark">
                 Voyage et découvertes sur la Côte d’Azur.
               </h1>
               <h2 className="plan__annotation">
@@ -215,17 +206,16 @@ const Layout = () => {
               <h3>Voyages et séjours sur la Côte d’Azur.</h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  <FaBullseye /> Organisez
+                  Organisez
                   <strong> vos voyages et séjours </strong> sur la Côte d’Azur{" "}
                   pour partir à la découverte d’une région pleine de surprises!
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Rencontres avec des passionnés au savoir-faire
-                  millénaire, apprentissage des cultures et tradition…
+                  Rencontres avec des passionnés au savoir-faire millénaire,
+                  apprentissage des cultures et tradition…
                 </li>
                 <li className="plan__feature">
-                  <FaBullseye /> Attendez-vous à vivre des moments inoubliables
-                  !
+                  Attendez-vous à vivre des moments inoubliables !
                 </li>
               </ul>
               <div>
@@ -300,7 +290,30 @@ const Layout = () => {
         </section>
       </main>
 
-      <Footer />
+      <Footer>
+        <section>
+          <h3>ARTICLES RECENTS</h3>
+          <nav>
+            <ul className="main-footer__links">
+              <li className="main-footer__link article">
+                La motivation, source de bien-être !
+              </li>
+              <li className="main-footer__link article">
+                Un séminaire à la montagne ?
+              </li>
+              <li className="main-footer__link article">
+                Féstivité de fin d'année, besoin d'une idée ?
+              </li>
+              <li className="main-footer__link article">
+                Portes ouvertes Méditeranéennes
+              </li>
+              <li className="main-footer__link article">
+                Conférence et Coupe du monde Féminin 2019
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </Footer>
     </React.Fragment>
   )
 }

@@ -6,7 +6,7 @@ import socialIcons from "../../constants/social-icons"
 import styles from "../css/footer.module.css"
 import "../UIElements/Contact.css"
 
-const NewFooter = () => {
+const Footer = ({ children }) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.gridFooter}>
@@ -33,28 +33,7 @@ const NewFooter = () => {
             Copyright Azur Riviera Prestations 2020®
           </div>
         </section>
-        <section>
-          <h3>ARTICLES RECENTS</h3>
-          <nav>
-            <ul className="main-footer__links">
-              <li className="main-footer__link article">
-                La motivation, source de bien-être !
-              </li>
-              <li className="main-footer__link article">
-                Un séminaire à la montagne ?
-              </li>
-              <li className="main-footer__link article">
-                Féstivité de fin d'année, besoin d'une idée ?
-              </li>
-              <li className="main-footer__link article">
-                Portes ouvertes Méditeranéennes
-              </li>
-              <li className="main-footer__link article">
-                Conférence et Coupe du monde Féminin 2019
-              </li>
-            </ul>
-          </nav>
-        </section>
+        {children}
         <section>
           <div className="center">
             <h3>NEWSLETTER</h3>
@@ -81,7 +60,6 @@ const NewFooter = () => {
                   placeholder="exemple@exemple.com"
                 />
               </div>
-
               <div>
                 <input type="submit" value="envoyer" className="submit" />
               </div>
@@ -93,4 +71,4 @@ const NewFooter = () => {
   )
 }
 
-export default NewFooter
+export default Footer

@@ -24,12 +24,12 @@ const NavLinks = () => {
       </li>
       <li>
         <AniLink fade to="/about" activeClassName="active">
-          Points Forts
+          À propos
         </AniLink>
       </li>
       <li>
         <AniLink fade to="/contact" activeClassName="active">
-          Contact
+          Devis
         </AniLink>
       </li>
     </React.Fragment>

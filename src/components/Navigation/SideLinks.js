@@ -8,18 +8,16 @@ const SideLinks = props => {
   return (
     <ul className="links-list">
       {anchorLinks}
-      <li>
-        <Link to="/about">Points Forts</Link>
-      </li>
+
       <li>
         <Link to="/news">News</Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">Devis</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/faq">FAQ</Link>
-      </li>
+      </li> */}
     </ul>
   )
 }

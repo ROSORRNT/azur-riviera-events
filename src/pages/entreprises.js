@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import { FaHandsHelping, FaGlobeAmericas, FaCommentDots } from "react-icons/fa"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
@@ -22,6 +23,9 @@ export default ({ data }) => {
       </li>
       <li>
         <Link to="/entreprises#transport">Transport - Yatching</Link>
+      </li>
+      <li>
+        <Link to="/strongpoints">Points forts</Link>
       </li>
     </React.Fragment>
   )
@@ -67,110 +71,184 @@ export default ({ data }) => {
             </Card>
 
             <article id="seminaires">
-              <h1>Séminaires</h1>
+              <h1>Séminaire</h1>
               <Card>
-                <p>
-                  Nous vous accompagnons dans la réalisation de vos séminaires
-                  de la conception jusqu’au jour J. Vous bénéficiez de notre
-                  connaissance de la région, de notre large réseau de
-                  <strong>partenaires</strong> locaux ou régionaux
-                  rigoureusement sélectionnés.
-                </p>
-                <p>
-                  Dès que nous recevons votre demande, nous établissons ensemble
-                  un agenda de travail. Par des réunions régulières, nous vous
-                  tenons informés de l’état d’avancement de votre évènement.
-                </p>
-                <p>
-                  Nous vous conseillons sur le choix du lieu en fonction de la
-                  taille de votre groupe et de l’objectif de votre réunion.
-                  <br />
-                  Ensemble, nous effectuons des visites de repérage pour vous
-                  aider à choisir le lieu le mieux adapté à vos attentes. Selon
-                  vos besoins, nous vous donnons un devis détaillé de chaque
-                  prestation pour vous garantir des coûts maitrisés.
-                </p>
-                <p>
-                  Nos activités de cohésion d’équipes{" "}
-                  <strong> (team building ou team learning)</strong> vous sont
-                  aussi proposées pour agrémenter votre séminaire. Il est
-                  aujourd’hui incontournable pour mieux se connaître, de
-                  participer à ces animations ludiques, sportives ou culturelles
-                  dans le cadre de réunion avec vos collaborateurs ou vos
-                  clients.
-                </p>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.seminaire.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                  <div>
+                    <h3>
+                      Un large réseau de
+                      <strong> partenaires</strong> locaux ou régionaux
+                      rigoureusement sélectionnés.
+                    </h3>
+                    <p>
+                      Dès que nous recevons votre demande, nous établissons
+                      ensemble un agenda de travail. Par des réunions
+                      régulières, nous vous tenons informés de l’état
+                      d’avancement de votre évènement.
+                    </p>
+                    <p>
+                      Nous vous conseillons sur le choix du lieu en fonction de
+                      la taille de votre groupe et de l’objectif de votre
+                      réunion.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div>
+                    <p>
+                      Ensemble, nous effectuons des visites de repérage pour
+                      vous aider à choisir le lieu le mieux adapté à vos
+                      attentes. Selon vos besoins, nous vous donnons un devis
+                      détaillé de chaque prestation pour vous garantir des coûts
+                      maitrisés.
+                    </p>
+                    <p>
+                      Nos activités de cohésion d’équipes{" "}
+                      <strong> (team building ou team learning)</strong> vous
+                      sont aussi proposées pour agrémenter votre séminaire. Il
+                      est aujourd’hui incontournable pour mieux se connaître, de
+                      participer à ces animations ludiques, sportives ou
+                      culturelles dans le cadre de réunion avec vos
+                      collaborateurs ou vos clients.
+                    </p>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.seminaireTwo.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                </div>
               </Card>
             </article>
+
             <article id="conferences">
               <h1>Conférences</h1>
               <Card>
-                <p>
-                  Nous vous accompagnons dans la réalisation de vos séminaires
-                  de la conception jusqu’au jour J. Vous bénéficiez de notre
-                  connaissance de la région, de notre large réseau de
-                  <strong>partenaires</strong> locaux ou régionaux
-                  rigoureusement sélectionnés.
-                </p>
-                <p>
-                  Dès que nous recevons votre demande, nous établissons ensemble
-                  un agenda de travail. Par des réunions régulières, nous vous
-                  tenons informés de l’état d’avancement de votre évènement.
-                </p>
-                <p>
-                  Nous vous conseillons sur le choix du lieu en fonction de la
-                  taille de votre groupe et de l’objectif de votre réunion.
-                  <br />
-                  Ensemble, nous effectuons des visites de repérage pour vous
-                  aider à choisir le lieu le mieux adapté à vos attentes. Selon
-                  vos besoins, nous vous donnons un devis détaillé de chaque
-                  prestation pour vous garantir des coûts maitrisés.
-                </p>
-                <p>
-                  Nos activités de cohésion d’équipes{" "}
-                  <strong> (team building ou team learning)</strong> vous sont
-                  aussi proposées pour agrémenter votre séminaire. Il est
-                  aujourd’hui incontournable pour mieux se connaître, de
-                  participer à ces animations ludiques, sportives ou culturelles
-                  dans le cadre de réunion avec vos collaborateurs ou vos
-                  clients.
-                </p>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.confTwo.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                  <div>
+                    <h3>
+                      Nous vous accompagnons dans la réalisation de vos
+                      séminaires de la conception jusqu’au jour J.
+                    </h3>
+                    <p>
+                      Dès que nous recevons votre demande, nous établissons
+                      ensemble un agenda de travail. Par des réunions
+                      régulières, nous vous tenons informés de l’état
+                      d’avancement de votre évènement.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div>
+                    <p>
+                      Selon vos besoins, nous vous donnons un devis détaillé
+                      pour chaque prestation:
+                    </p>
+                    <ul>
+                      <li>- Recherche de lieux et d’hébergement</li>
+                      <li>- Location de salle et salles de sous-commission</li>
+                      <li>
+                        - Support de communication: signalétique, flyers, print,
+                        site internet.{" "}
+                      </li>
+                      <li>- Vidéo-conférence</li>
+                      <li>
+                        - Traiteur (café d’accueil, pauses, repas, cocktail)
+                      </li>
+                      <li>- Traducteur</li>
+                      <li>- Photographe</li>
+                      <li>- Attaché de presse</li>
+                      <li>
+                        - Transport et logistique de votre lieu d’hébergement
+                        sur le lieu de la conférence
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.conf.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                </div>
               </Card>
             </article>
+
             <article id="comite">
               <h1>Comité d'entreprise</h1>
               <Card>
-                <p>
-                  Nous vous accompagnons dans la réalisation de vos séminaires
-                  de la conception jusqu’au jour J. Vous bénéficiez de notre
-                  connaissance de la région, de notre large réseau de
-                  <strong>partenaires</strong> locaux ou régionaux
-                  rigoureusement sélectionnés.
-                </p>
-                <p>
-                  Dès que nous recevons votre demande, nous établissons ensemble
-                  un agenda de travail. Par des réunions régulières, nous vous
-                  tenons informés de l’état d’avancement de votre évènement.
-                </p>
-                <p>
-                  Nous vous conseillons sur le choix du lieu en fonction de la
-                  taille de votre groupe et de l’objectif de votre réunion.
-                  <br />
-                  Ensemble, nous effectuons des visites de repérage pour vous
-                  aider à choisir le lieu le mieux adapté à vos attentes. Selon
-                  vos besoins, nous vous donnons un devis détaillé de chaque
-                  prestation pour vous garantir des coûts maitrisés.
-                </p>
-                <p>
-                  Nos activités de cohésion d’équipes{" "}
-                  <strong> (team building ou team learning)</strong> vous sont
-                  aussi proposées pour agrémenter votre séminaire. Il est
-                  aujourd’hui incontournable pour mieux se connaître, de
-                  participer à ces animations ludiques, sportives ou culturelles
-                  dans le cadre de réunion avec vos collaborateurs ou vos
-                  clients.
-                </p>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.comiteEntreprise.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                  <div>
+                    <p>
+                      Nous vous conseillons sur le choix du lieu en fonction de
+                      la taille de votre groupe et de l’objectif de votre
+                      réunion.
+                      <br />
+                      Ensemble, nous effectuons des visites de repérage pour
+                      vous aider à choisir le lieu le mieux adapté à vos
+                      attentes. Selon vos besoins, nous vous donnons un devis
+                      détaillé de chaque prestation pour vous garantir des coûts
+                      maitrisés.
+                    </p>
+                    <p>
+                      Vous pouvez puiser quelques idées dans notre catalogue
+                      d’activités en mer, à la montagne ou à la campagne.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div>
+                    <p>
+                      Nous saurons nous adapter à vos budgets pour organiser vos
+                      manifestations familiales avec ou sans hébergement:
+                    </p>
+                    <ul>
+                      <li>- Kart, motoneige, VTT</li>
+                      <li>- Baptême parapente</li>
+                      <li>
+                        - Week end sur le thème “Nos chères colonies de vacances
+                      </li>
+                      <li>
+                        - Jeux de plages, course d’orientation, rallye sur mer
+                        et en ville.
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.comiteEntrepriseTwo.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                </div>
               </Card>
             </article>
+
             <article id="transport">
               <h1>Transport - Yatching</h1>
               <Card>
@@ -216,6 +294,48 @@ export default ({ data }) => {
 export const query = graphql`
   {
     seminarBcg: file(relativePath: { eq: "seminarB.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    conf: file(relativePath: { eq: "conf.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    confTwo: file(relativePath: { eq: "conf2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    seminaire: file(relativePath: { eq: "seminaire.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    seminaireTwo: file(relativePath: { eq: "seminaire2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    comiteEntreprise: file(relativePath: { eq: "comite-entreprise.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    comiteEntrepriseTwo: file(relativePath: { eq: "comite-entreprise2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp

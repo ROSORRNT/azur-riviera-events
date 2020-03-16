@@ -1,9 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
 import StyledHero from "../components/UIElements/StyledHero"
 import Title from "../components/UIElements/Title"
-import Contact from "../components/FormElements/Contact"
+import Devis from "../components/FormElements/Devis"
+import Footer from "../components/UIElements/Footer"
+
+import styles from "../components/css/footer.module.css"
 
 export default ({ data }) => {
   return (
@@ -12,10 +16,24 @@ export default ({ data }) => {
       <StyledHero img={data.connectBcg.childImageSharp.fluid}></StyledHero>
       <section className="container">
         <br />
-        <Contact>
-          <Title title="Nous" subtitle="contacter" />
-        </Contact>
+        <Devis>
+          <Title title="Demande de" subtitle="devis" />
+        </Devis>
       </section>
+      <Footer>
+        <section>
+          <div className={styles.links}>
+            <Link to="/legal">MENTIONS LEGALES</Link>
+          </div>
+          <div className={styles.copyright}>
+            <p>
+              45, chemin Collet Baraya - 06670 COLOMARS <br />
+              <strong>Tél</strong> : 06 60 61 33 99 <br />
+              <strong>Mail</strong> : patricia@azur-riviera-events.com
+            </p>
+          </div>
+        </section>
+      </Footer>
     </React.Fragment>
   )
 }
