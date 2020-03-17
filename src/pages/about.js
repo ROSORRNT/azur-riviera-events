@@ -14,7 +14,7 @@ export default ({ data }) => {
       <StyledHero img={data.aboutBackground.childImageSharp.fluid}>
         <Banner
           title="À propos de nous"
-          info="Nos valeurs, partenaires, expériences."
+          info="Nos valeurs - partenaires - expériences."
         >
           <Link to="/about#charte" className="button">
             Voir plus
