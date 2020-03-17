@@ -28,11 +28,69 @@ const getAbout = graphql`
         }
       }
     }
+    charte: file(relativePath: { eq: "charte.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    enedis: file(relativePath: { eq: "enedis.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    kone: file(relativePath: { eq: "kone.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    laLigue: file(relativePath: { eq: "laLigue.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    amadeus: file(relativePath: { eq: "amadeus.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    caisseEpargne: file(relativePath: { eq: "caisseEpargne.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    villeDeNice: file(relativePath: { eq: "villeDeNice.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
   }
 `
 
 const About = () => {
-  const { aboutImage } = useStaticQuery(getAbout)
+  const {
+    aboutImage,
+    charte,
+    enedis,
+    kone,
+    laLigue,
+    amadeus,
+    caisseEpargne,
+    villeDeNice,
+  } = useStaticQuery(getAbout)
   const anchorLinksList = (
     <React.Fragment>
       <li>
@@ -63,6 +121,7 @@ const About = () => {
           </article>
           <article className={styles.aboutInfo}>
             <h4>Confiez nous vos rêves, nous saurons les réaliser !</h4>
+
             <ul className={styles.aboutList}>
               <li>
                 {" "}
@@ -107,43 +166,51 @@ const About = () => {
               <h2 style={{ marginTop: "0" }}>CHARTE DE NOS VALEURS</h2>
               <Card>
                 <h3>Nous portons attention au sens de nos actions.</h3>
-                <ul className={styles.aboutList}>
-                  <li>
-                    {" "}
-                    <strong>Passion</strong> : partager un projet commun
-                  </li>
+                <div className="grid-article">
+                  <div className={styles.imgContainer}>
+                    <Img
+                      fluid={charte.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <ul className={styles.aboutList}>
+                    <li>
+                      {" "}
+                      <strong>Passion</strong> : partager un projet commun
+                    </li>
 
-                  <li>
-                    {" "}
-                    <strong>Résponsabilité</strong> : garantir des services et
-                    respecter nos engagements
-                  </li>
+                    <li>
+                      {" "}
+                      <strong>Résponsabilité</strong> : garantir des services et
+                      respecter nos engagements
+                    </li>
 
-                  <li>
-                    {" "}
-                    <strong>Transparence</strong> : fournir les meilleurs
-                    services au juste prix
-                  </li>
+                    <li>
+                      {" "}
+                      <strong>Transparence</strong> : fournir les meilleurs
+                      services au juste prix
+                    </li>
 
-                  <li>
-                    {" "}
-                    <strong>Éfficacité</strong> : faire ensemble que votre
-                    évènement soit un succès
-                  </li>
+                    <li>
+                      {" "}
+                      <strong>Éfficacité</strong> : faire ensemble que votre
+                      évènement soit un succès
+                    </li>
 
-                  <li>
-                    {" "}
-                    <strong>Étique</strong> : déontologie et confidentialité au
-                    cœur de nos activités
-                  </li>
+                    <li>
+                      {" "}
+                      <strong>Étique</strong> : déontologie et confidentialité
+                      au cœur de nos activités
+                    </li>
 
-                  <li>
-                    {" "}
-                    <strong>Empathie</strong> : placer l’humain au centre de
-                    l’évènement – PERFORMANCE : mettre en place des outils pour
-                    mesurer la satisfaction de nos clients
-                  </li>
-                </ul>
+                    <li>
+                      {" "}
+                      <strong>Empathie</strong> : placer l’humain au centre de
+                      l’évènement – PERFORMANCE : mettre en place des outils
+                      pour mesurer la satisfaction de nos clients
+                    </li>
+                  </ul>
+                </div>
               </Card>
             </article>
 
@@ -236,6 +303,48 @@ const About = () => {
             </article>
             <article id="references">
               <h2>NOS RÉFÉRENCES</h2>
+              <Card style={{ marginBottom: "15px" }}>
+                <div className="grid-article-col">
+                  <div>
+                    <Img
+                      fluid={enedis.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div>
+                    <Img
+                      fluid={kone.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div style={{ width: "50%", height: "auto" }}>
+                    <Img
+                      fluid={laLigue.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                </div>
+                <div className="grid-article-col">
+                  <div>
+                    <Img
+                      fluid={amadeus.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div>
+                    <Img
+                      fluid={caisseEpargne.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div style={{ width: "50%", height: "auto" }}>
+                    <Img
+                      fluid={villeDeNice.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                </div>
+              </Card>
             </article>
           </div>
         </section>

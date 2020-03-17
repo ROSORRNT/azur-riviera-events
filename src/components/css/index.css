@@ -388,6 +388,14 @@ ul {
   text-align: justify;
 }
 
+.grid-article-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   background: #0e4f1f;
   color: white;
