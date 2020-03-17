@@ -108,9 +108,10 @@ const About = () => {
 
   return (
     <React.Fragment>
-      <section className={styles.about}>
-        <Title title="Points" subtitle="Forts" />
-        <div className={styles.aboutCenter}>
+      <section>
+        {" "}
+        <Title title="Nos point" subtitle="forts" />
+        <article className={styles.aboutCenter} style={{ marginTop: "0" }}>
           <article className={styles.aboutImg}>
             <div className={styles.imgContainer}>
               <Img
@@ -119,7 +120,7 @@ const About = () => {
               />
             </div>
           </article>
-          <article className={styles.aboutInfo}>
+          <article>
             <h4>Confiez nous vos rêves, nous saurons les réaliser !</h4>
 
             <ul className={styles.aboutList}>
@@ -155,15 +156,17 @@ const About = () => {
               </li>
             </ul>
           </article>
-        </div>
+        </article>
       </section>
-      <main className="container">
+      <main style={{ marginTop: "2.5rem" }} className="container">
         <br />
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
           <div>
             <article id="charte">
-              <h2 style={{ marginTop: "0" }}>CHARTE DE NOS VALEURS</h2>
+              <h2 id="charte" style={{ marginTop: "0" }}>
+                CHARTE DE NOS VALEURS
+              </h2>
               <Card>
                 <h3>Nous portons attention au sens de nos actions.</h3>
                 <div className="grid-article">

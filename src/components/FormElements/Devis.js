@@ -7,7 +7,7 @@ const Devis = ({ children }) => {
   return (
     <section>
       {children}
-      <div className={styles.center}>
+      <div style={{ marginTop: "1rem" }} className={styles.center}>
         <form
           action="https://formspree.io/romainsorrnti@gmail.com"
           method="POST"

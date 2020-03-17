@@ -17,7 +17,7 @@ export default ({ data }) => {
       <section className="container">
         <br />
         <Devis>
-          <Title title="Demande de" subtitle="devis" />
+          <Title className="devis__title" title="Demande de" subtitle="devis" />
         </Devis>
       </section>
       <Footer>
