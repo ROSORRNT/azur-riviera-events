@@ -77,6 +77,9 @@ const Layout = () => {
                 title="Azur Rivera"
                 subtitle="Events"
               />
+              <h3 className="home--subtitle">
+                Créateurs et concépteurs d'événements
+              </h3>
               <div className={styles.imgContainer}>
                 <Img
                   fluid={data.indexImage.childImageSharp.fluid}
@@ -85,7 +88,7 @@ const Layout = () => {
               </div>
             </article>{" "}
             <article className={styles.aboutInfo}>
-              <Card>
+              <Card style={{ marginTop: "1rem" }}>
                 <p style={{ width: "90%", textAlign: "justify" }}>
                   Notre métier est de rendre vos{" "}
                   <strong>événements uniques</strong>, personnalisés et de les
@@ -121,14 +124,16 @@ const Layout = () => {
 
         <section id="plans">
           <h1
-            style={{ marginTop: "2.5rem", marginBottom: "2rem" }}
+            style={{ marginTop: "3rem", marginBottom: "2rem" }}
             className="section-title"
           >
             NOS SERVICES SUR MESURE
           </h1>
           <div className="plan__list">
             <article className="plan plan--highlighted__enterprises">
-              <h1 className="plan__title--dark">Évènements d’entreprises</h1>
+              <h1 className="plan__title--dark plan--shadow">
+                Évènements d’entreprises
+              </h1>
               <h2 className="plan__annotation">
                 Séminaires Conférences <br />
                 Comité d'entreprise <br />
@@ -162,7 +167,9 @@ const Layout = () => {
             </article>
 
             <article className="plan plan--highlighted__teambuilding">
-              <h1 className="plan__title--dark">Cohésion d’équipe</h1>
+              <h1 className="plan__title--dark plan--shadow">
+                Cohésion d’équipe
+              </h1>
               <h2 className="plan__annotation">
                 {" "}
                 Sport et <br />
@@ -195,7 +202,7 @@ const Layout = () => {
             </article>
 
             <article className="plan plan--highlighted__outdoor">
-              <h1 className="plan__title--dark">
+              <h1 className="plan__title--dark plan--shadow">
                 Voyage et découvertes sur la Côte d’Azur.
               </h1>
               <h2 className="plan__annotation">
@@ -232,37 +239,45 @@ const Layout = () => {
           <ul className="key-feature__list">
             <li className="key-feature">
               <div className="key-feature__image">
-                <Img
-                  style={{ borderRadius: "50%" }}
-                  fluid={data.fluid.childImageSharp.fluid}
-                />
+                <Link to="/teambuilding#sport-culture">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.fluid.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
               <p className="key-feature__description">Sport et Culture</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Img
-                  style={{ borderRadius: "50%" }}
-                  fluid={data.sejoursEntreprise.childImageSharp.fluid}
-                />
+                <Link to="/entreprises#transport">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.sejoursEntreprise.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
               <p className="key-feature__description">Séjours entreprises</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Img
-                  style={{ borderRadius: "50%" }}
-                  fluid={data.comiteEntreprise.childImageSharp.fluid}
-                />
+                <Link to="/entreprises#comite">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.comiteEntreprise.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
               <p className="key-feature__description">Comité d'entreprise</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Img
-                  style={{ borderRadius: "50%" }}
-                  fluid={data.culture.childImageSharp.fluid}
-                />
+                <Link to="/teambuilding#ateliers">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.culture.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
               <p className="key-feature__description">
                 Découvertes Culturelles
@@ -270,19 +285,23 @@ const Layout = () => {
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Img
-                  style={{ borderRadius: "50%" }}
-                  fluid={data.sport.childImageSharp.fluid}
-                />
+                <Link to="/outdoor#vtt-rally-regate">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.sport.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
               <p className="key-feature__description">Activités Sportives</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Img
-                  style={{ borderRadius: "50%" }}
-                  fluid={data.yatching.childImageSharp.fluid}
-                />
+                <Link to="/entreprises#transport">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.yatching.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
               <p className="key-feature__description">Yatching</p>
             </li>

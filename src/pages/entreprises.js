@@ -250,38 +250,61 @@ export default ({ data }) => {
             </article>
 
             <article id="transport">
-              <h1>Transport - Yatching</h1>
+              <h1>TRANSPORT-YACHTING</h1>
               <Card>
-                <p>
-                  Nous vous accompagnons dans la réalisation de vos séminaires
-                  de la conception jusqu’au jour J. Vous bénéficiez de notre
-                  connaissance de la région, de notre large réseau de
-                  <strong>partenaires</strong> locaux ou régionaux
-                  rigoureusement sélectionnés.
-                </p>
-                <p>
-                  Dès que nous recevons votre demande, nous établissons ensemble
-                  un agenda de travail. Par des réunions régulières, nous vous
-                  tenons informés de l’état d’avancement de votre évènement.
-                </p>
-                <p>
-                  Nous vous conseillons sur le choix du lieu en fonction de la
-                  taille de votre groupe et de l’objectif de votre réunion.
-                  <br />
-                  Ensemble, nous effectuons des visites de repérage pour vous
-                  aider à choisir le lieu le mieux adapté à vos attentes. Selon
-                  vos besoins, nous vous donnons un devis détaillé de chaque
-                  prestation pour vous garantir des coûts maitrisés.
-                </p>
-                <p>
-                  Nos activités de cohésion d’équipes{" "}
-                  <strong> (team building ou team learning)</strong> vous sont
-                  aussi proposées pour agrémenter votre séminaire. Il est
-                  aujourd’hui incontournable pour mieux se connaître, de
-                  participer à ces animations ludiques, sportives ou culturelles
-                  dans le cadre de réunion avec vos collaborateurs ou vos
-                  clients.
-                </p>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.yatching.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                  <div>
+                    <p>Vous recherchez un transport durant votre séjour ?</p>
+                    <p>
+                      Pour accueillir vos clients à l’aéroport, choisissez
+                      l’excellence et un service personnalisé avec un hôte qui
+                      se chargera de leur transport sur le lieu de la résidence.
+                    </p>
+                    <p>
+                      Nous vous apportons toutes nos solutions avec nos
+                      prestataires pour vous permettre de vous déplacer à votre
+                      guise dans la région:
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div>
+                    <ul style={{ lineHeight: "1.5rem" }}>
+                      <li>- Voiture avec chauffeur jusqu’à 8 personnes</li>
+                      <li>
+                        - Minibus ou autocars de tourisme pour vos groupes
+                      </li>
+                      <li>
+                        - Hélicoptère pour vous amener rapidement sur Monaco
+                        mais aussi pour vous rendre sur des sites dans l’arrière
+                        pays
+                      </li>
+                      <li>
+                        - Yacht, voilier, catamaran pour vos vacances ou pour
+                        vivre une expérience fabuleuse sur une journée le long
+                        du littoral.
+                      </li>
+                    </ul>
+                    <p>
+                      Fiabilité, confiance, qualité, sécurité sont nos critères
+                      pour vous garantir des services haut de gamme.
+                    </p>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.helico.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                </div>
               </Card>
             </article>
           </div>
@@ -336,6 +359,20 @@ export const query = graphql`
       }
     }
     comiteEntrepriseTwo: file(relativePath: { eq: "comite-entreprise2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    yatching: file(relativePath: { eq: "yachtingOne.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    helico: file(relativePath: { eq: "helico.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp
