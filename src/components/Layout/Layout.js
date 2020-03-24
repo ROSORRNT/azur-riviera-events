@@ -8,6 +8,7 @@ import MainNavigation from "../Navigation/MainNavigation"
 import Card from "../UIElements/Card"
 import styles from "./../css/about.module.css"
 import Footer from "../UIElements/Footer"
+import VedettePosts from "../Posts/VedettePosts"
 
 const getImages = graphql`
   query Images {
@@ -74,7 +75,7 @@ const Layout = () => {
             <article className={styles.aboutImg}>
               <Title
                 className={styles.homeTitle}
-                title="Azur Rivera"
+                title="Azur Riviera"
                 subtitle="Events"
               />
               <h3 className="home--subtitle">
@@ -234,7 +235,7 @@ const Layout = () => {
           </div>
         </section>
 
-        <section style={{ marginBottom: "4.5rem" }} id="key-features">
+        <section id="key-features">
           <h1 className="section-title">NOS ÉVÈNEMENTS PERSONNALISÉS</h1>
           <ul className="key-feature__list">
             <li className="key-feature">
@@ -307,6 +308,7 @@ const Layout = () => {
             </li>
           </ul>
         </section>
+        <VedettePosts showDescrption={false} />
       </main>
 
       <Footer>

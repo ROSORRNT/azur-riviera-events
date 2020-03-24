@@ -2,6 +2,7 @@
 
 :root {
   --primaryColor: #f6f1d7;
+  --primaryBlue: #3fd0d4;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -34,10 +35,8 @@ h6 {
   /* font-family: "Poppins", sans-serif; */
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
+  text-decoration: none;
 }
-/* p {
-  margin-bottom: 1.25rem;
-} */
 
 .btn-white,
 .btn-primary {
@@ -47,6 +46,7 @@ h6 {
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
   border: 2px solid var(--mainWhite);
+  border-radius: 3px;
   padding: 0.9rem 1.6rem;
   display: inline-block;
   transition: var(--mainTransition);
@@ -54,16 +54,16 @@ h6 {
 }
 .btn-white:hover {
   background: var(--mainWhite);
-  color: var(--primaryColor);
+  color: var(--primaryBlue);
 }
 .btn-primary {
-  background: var(--primaryColor);
+  background: var(--primaryBlue);
   color: var(--mainWhite);
-  border: 2px solid var(--primaryColor);
+  border: 2px solid var(--primaryBlue);
 }
 .btn-primary:hover {
   background: transparent;
-  color: var(--primaryColor);
+  color: var(--primaryBlue);
 }
 main {
   min-height: 100vh;
