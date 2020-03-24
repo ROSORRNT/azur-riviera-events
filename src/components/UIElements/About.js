@@ -42,13 +42,7 @@ const getAbout = graphql`
         }
       }
     }
-    kone: file(relativePath: { eq: "kone.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
+
     laLigue: file(relativePath: { eq: "laLigue.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
@@ -64,13 +58,6 @@ const getAbout = graphql`
       }
     }
     caisseEpargne: file(relativePath: { eq: "caisseEpargne.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    villeDeNice: file(relativePath: { eq: "villeDeNice.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -314,12 +301,7 @@ const About = () => {
                       alt="awesome landscape"
                     />
                   </div>
-                  <div>
-                    <Img
-                      fluid={kone.childImageSharp.fluid}
-                      alt="awesome landscape"
-                    />
-                  </div>
+
                   <div style={{ width: "50%", height: "auto" }}>
                     <Img
                       fluid={laLigue.childImageSharp.fluid}
@@ -337,12 +319,6 @@ const About = () => {
                   <div>
                     <Img
                       fluid={caisseEpargne.childImageSharp.fluid}
-                      alt="awesome landscape"
-                    />
-                  </div>
-                  <div style={{ width: "50%", height: "auto" }}>
-                    <Img
-                      fluid={villeDeNice.childImageSharp.fluid}
                       alt="awesome landscape"
                     />
                   </div>
