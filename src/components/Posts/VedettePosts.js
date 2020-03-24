@@ -19,7 +19,7 @@ const getPosts = graphql`
           slug
           pictures {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
