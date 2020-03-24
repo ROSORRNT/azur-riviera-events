@@ -31,7 +31,7 @@ const getPosts = graphql`
 const VedettePosts = ({ showDescription }) => {
   const response = useStaticQuery(getPosts)
   const posts = response.vedettePosts.edges
-
+  // retry
   return (
     <section className={styles.posts}>
       <Title title="Articles" subtitle="en vedette" />
