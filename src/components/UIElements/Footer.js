@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaRProject } from "react-icons/fa"
+
 import links from "../../constants/links"
 import socialIcons from "../../constants/social-icons"
 import styles from "../css/footer.module.css"

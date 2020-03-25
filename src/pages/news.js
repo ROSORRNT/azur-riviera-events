@@ -1,16 +1,18 @@
 import React from "react"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
+import BlogList from "../components/Blog/BlogList"
 import StyledHero from "../components/UIElements/StyledHero"
-import Posts from "../components/Posts/Posts"
+// import Posts from "../components/Posts/Posts"
 
 export default ({ data }) => {
   return (
     <React.Fragment>
       <MainNavigation />
-      {/* <StyledHero img={data.blogBcg.childImageSharp.fluid}></StyledHero> */}
+      <StyledHero img={data.blogBcg.childImageSharp.fluid}></StyledHero>
       <section className="container">
-        <Posts showDescription={true} />
+        {/* <Posts showDescription={true} /> */}
+        <BlogList />
       </section>
     </React.Fragment>
   )

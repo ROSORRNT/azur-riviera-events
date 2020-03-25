@@ -131,7 +131,7 @@ ul {
 }
 
 .plan--highlighted__enterprises {
-  background: #8abcee;
+  background: #7cb3eb;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -142,7 +142,7 @@ ul {
 }
 
 .plan--highlighted__outdoor {
-  background: #a8f163;
+  background: #9fe65c;
 
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
