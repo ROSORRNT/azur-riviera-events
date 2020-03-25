@@ -16,7 +16,10 @@ export default ({ data }) => {
         <Link to="/entreprises#seminaires">Séminaires</Link>
       </li>
       <li>
-        <Link to="/entreprises#conferences">Conférences</Link>
+        <Link to="/entreprises#conferences">Conférence</Link>
+      </li>
+      <li>
+        <Link to="/entreprises#communication">Communication</Link>
       </li>
       <li>
         <Link to="/entreprises#comite">Comité d'entreprise</Link>
@@ -131,7 +134,68 @@ export default ({ data }) => {
             </article>
 
             <article id="conferences">
-              <h1>Conférences</h1>
+              <h1>Conférence</h1>
+              <Card>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.confTwo.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                  <div>
+                    <h3>
+                      Nous vous accompagnons dans la réalisation de vos
+                      séminaires de la conception jusqu’au jour J.
+                    </h3>
+                    <p>
+                      Dès que nous recevons votre demande, nous établissons
+                      ensemble un agenda de travail. Par des réunions
+                      régulières, nous vous tenons informés de l’état
+                      d’avancement de votre évènement.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div>
+                    <p>
+                      Selon vos besoins, nous vous donnons un devis détaillé
+                      pour chaque prestation:
+                    </p>
+                    <ul>
+                      <li>- Recherche de lieux et d’hébergement</li>
+                      <li>- Location de salle et salles de sous-commission</li>
+                      <li>
+                        - Support de communication: signalétique, flyers, print,
+                        site internet.{" "}
+                      </li>
+                      <li>- Vidéo-conférence</li>
+                      <li>
+                        - Traiteur (café d’accueil, pauses, repas, cocktail)
+                      </li>
+                      <li>- Traducteur</li>
+                      <li>- Photographe</li>
+                      <li>- Attaché de presse</li>
+                      <li>
+                        - Transport et logistique de votre lieu d’hébergement
+                        sur le lieu de la conférence
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.conf.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                </div>
+              </Card>
+            </article>
+
+            <article id="communication">
+              <h1>Communication</h1>
               <Card>
                 <div className="grid-article">
                   <div className="activities__image">
@@ -250,7 +314,7 @@ export default ({ data }) => {
             </article>
 
             <article id="transport">
-              <h1>TRANSPORT-YACHTING</h1>
+              <h1>Transport-Yachting</h1>
               <Card>
                 <div className="grid-article">
                   <div className="activities__image">

@@ -10,7 +10,7 @@ const SideLinks = props => {
       {anchorLinks}
 
       <li>
-        <Link to="/news">News</Link>
+        <Link to="/news">Actualités</Link>
       </li>
       <li>
         <Link to="/contact">Devis</Link>

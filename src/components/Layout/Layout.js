@@ -12,7 +12,7 @@ import VedettePosts from "../Posts/VedettePosts"
 
 const getImages = graphql`
   query Images {
-    indexImage: file(relativePath: { eq: "sejour.jpg" }) {
+    indexImage: file(relativePath: { eq: "vueCollinechateau.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
@@ -79,7 +79,7 @@ const Layout = () => {
                 subtitle="Events"
               />
               <h3 className="home--subtitle">
-                Créateurs et concépteurs d'événements
+                Createurs et concepteurs d'evenements
               </h3>
               <div className={styles.imgContainer}>
                 <Img
@@ -133,7 +133,7 @@ const Layout = () => {
           <div className="plan__list">
             <article className="plan plan--highlighted__enterprises">
               <h1 className="plan__title--dark plan--shadow">
-                Évènements d’entreprises
+                Evènements d’entreprises
               </h1>
               <h2 className="plan__annotation">
                 Séminaires Conférences <br />
@@ -236,7 +236,7 @@ const Layout = () => {
         </section>
 
         <section id="key-features">
-          <h1 className="section-title">NOS ÉVÈNEMENTS PERSONNALISÉS</h1>
+          <h1 className="section-title">NOS EVENEMENTS PERSONNALISES</h1>
           <ul className="key-feature__list">
             <li className="key-feature">
               <div className="key-feature__image">

@@ -43,7 +43,7 @@ const VedettePosts = ({ showDescription }) => {
         <Post showDescription={showDescription} />
       </div>
       <AniLink fade to="/news" className="btn-primary">
-        Les news
+        Actualites
       </AniLink>
     </section>
   )

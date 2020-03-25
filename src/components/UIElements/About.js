@@ -81,14 +81,16 @@ const About = () => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
-        {" "}
+        <Link to="/about#experiences">Expériences</Link>{" "}
+      </li>
+      <li>
         <Link to="/about#charte">Nos Valeurs</Link>
       </li>
       <li>
         <Link to="/about#partenaires">Partenaires</Link>
       </li>
       <li>
-        <Link to="/about#experiences">Expériences</Link>{" "}
+        <Link to="/about#clients">Nos Clients</Link>
       </li>
     </React.Fragment>
   )
@@ -150,9 +152,39 @@ const About = () => {
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
           <div>
+            <article id="experiences">
+              <h2> Expériences</h2>
+              <Card>
+                <h3>25 ans au service de la clientèle internationale.</h3>
+                <p>
+                  La création de l’agence par sa fondatrice Patricia Le Bras,
+                  résulte de 15 années d’expérience dans l’hôtellerie de luxe
+                  dans les domaines du management et du commercial. Passionnée
+                  par son métier, elle a décidé de s’orienter vers
+                  l’évènementiel pour fournir à ses clients des services
+                  personnalisés répondant à leurs attentes.
+                </p>
+                <p>
+                  Sa vision du service et ses objectifs sont d’apporter à ses
+                  clients des projets sur-mesure de qualité grâce à des coûts
+                  maitrisés. La conception même des évènements est véhiculée par
+                  l’organisation, par le management et le conseil.
+                </p>
+                <p>
+                  Depuis 2005, l’agence propose le meilleur service à ses
+                  fidèles clients
+                </p>
+                <p>
+                  Attachée à l’idée d’une relation saine et pérenne avec ses
+                  prestataires, Azur Riviera Prestations s’inscrit dans une
+                  démarche de création d’évènements uniques et personnalisés.
+                </p>
+              </Card>
+            </article>
+            <br />
             <article id="charte">
               <h2 id="charte" style={{ marginTop: "0" }}>
-                CHARTE DE NOS VALEURS
+                Charte de nos valeurs
               </h2>
               <Card>
                 <h3>Nous portons attention au sens de nos actions.</h3>
@@ -168,35 +200,33 @@ const About = () => {
                       {" "}
                       <strong>Passion</strong> : partager un projet commun
                     </li>
-
                     <li>
                       {" "}
                       <strong>Résponsabilité</strong> : garantir des services et
                       respecter nos engagements
                     </li>
-
                     <li>
                       {" "}
                       <strong>Transparence</strong> : fournir les meilleurs
                       services au juste prix
                     </li>
-
                     <li>
                       {" "}
                       <strong>Éfficacité</strong> : faire ensemble que votre
                       évènement soit un succès
                     </li>
-
                     <li>
                       {" "}
                       <strong>Étique</strong> : déontologie et confidentialité
                       au cœur de nos activités
                     </li>
-
                     <li>
                       {" "}
                       <strong>Empathie</strong> : placer l’humain au centre de
-                      l’évènement – PERFORMANCE : mettre en place des outils
+                      l’évènement
+                    </li>
+                    <li>
+                      <strong>Performance</strong> : mettre en place des outils
                       pour mesurer la satisfaction de nos clients
                     </li>
                   </ul>
@@ -205,7 +235,7 @@ const About = () => {
             </article>
 
             <article id="partenaires">
-              <h2>PARTENAIRES</h2>
+              <h2>Partenaires</h2>
               <Card>
                 <p>
                   Votre interlocuteur unique centralise les{" "}
@@ -262,37 +292,8 @@ const About = () => {
               </Card>
             </article>
 
-            <article id="experiences">
-              <h2> EXPÉRIENCES</h2>
-              <Card>
-                <h3>25 ans au service de la clientèle internationale.</h3>
-                <p>
-                  La création de l’agence par sa fondatrice Patricia Le Bras,
-                  résulte de 15 années d’expérience dans l’hôtellerie de luxe
-                  dans les domaines du management et du commercial. Passionnée
-                  par son métier, elle a décidé de s’orienter vers
-                  l’évènementiel pour fournir à ses clients des services
-                  personnalisés répondant à leurs attentes.
-                </p>
-                <p>
-                  Sa vision du service et ses objectifs sont d’apporter à ses
-                  clients des projets sur-mesure de qualité grâce à des coûts
-                  maitrisés. La conception même des évènements est véhiculée par
-                  l’organisation, par le management et le conseil.
-                </p>
-                <p>
-                  Depuis 2005, l’agence propose le meilleur service à ses
-                  fidèles clients
-                </p>
-                <p>
-                  Attachée à l’idée d’une relation saine et pérenne avec ses
-                  prestataires, Azur Riviera Prestations s’inscrit dans une
-                  démarche de création d’évènements uniques et personnalisés.
-                </p>
-              </Card>
-            </article>
-            <article id="references">
-              <h2>NOS RÉFÉRENCES</h2>
+            <article id="clients">
+              <h2>Nos Clients</h2>
               <Card style={{ marginBottom: "15px" }}>
                 <div className="grid-article-col">
                   <div>

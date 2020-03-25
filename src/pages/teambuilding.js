@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
-// import Banner from "../components/UIElements/Banner"
-// import StyledHero from "../components/UIElements/StyledHero"
+import Banner from "../components/UIElements/Banner"
+import StyledHero from "../components/UIElements/StyledHero"
 import Card from "../components/UIElements/Card"
 import Img from "gatsby-image"
 
 export default ({ data }) => {
-  // console.log(data.parfum)
+  console.log(data.parfum)
   const anchorLinksList = (
     <React.Fragment>
       <li>
@@ -27,7 +27,7 @@ export default ({ data }) => {
   return (
     <React.Fragment>
       <MainNavigation className="main-header" />
-      {/* <StyledHero img={data.teambuildingBcg.childImageSharp.fluid}>
+      <StyledHero img={data.teambuildingBcg.childImageSharp.fluid}>
         <Banner
           color={"var(--lightBlue)"}
           title="ÉVÈNEMENTS COHÉSION D'ÉQUIPE"
@@ -37,7 +37,7 @@ export default ({ data }) => {
             Voir plus
           </Link>
         </Banner>
-      </StyledHero> */}
+      </StyledHero>
       <main className="container">
         <br />
         <section className="grid-container">
@@ -64,6 +64,49 @@ export default ({ data }) => {
                 </span>
               </p>
             </Card>
+            <br />
+            <article>
+              <Card>
+                <h1 style={{ textAlign: "center" }}>
+                  Un formidable terrain de jeux
+                </h1>
+                <p>
+                  La Côte d’Azur offre de nombreuses escapades, des visites, des
+                  balades pour partir à la découverte de la culture, du
+                  patrimoine et des traditions.
+                </p>
+                <p>
+                  Nos visites guidées sont élaborées selon les thématiques
+                  souhaitées avec un service clé en main:
+                </p>
+
+                <ul
+                  style={{
+                    color: "var(--fontColorDark)",
+                    fontSize: "1.2rem",
+                  }}
+                >
+                  <li>- Guide professionnelle parlant plusieurs langues</li>
+                  <li>- Transport en voiture avec chauffeur ou mini-bus</li>
+                  <li>
+                    - Sélection de restaurant respectant les exigences de nos
+                    clients
+                  </li>
+                  <li>- Visites réservées avec accès “VIP”</li>
+                  <li>
+                    - Animations et ateliers avec des spécialistes (peintre
+                    céramiste, potier, souffleur de verre, viticulteur,
+                    parfumeur…).
+                  </li>
+                </ul>
+
+                <p>
+                  Nous vous ferons découvrir différentes facettes de notre
+                  région qui vous réservent de très belles surprises et des
+                  moments inoubliables.
+                </p>
+              </Card>
+            </article>
 
             <article id="sport-culture">
               <h1>Sport et Culture</h1>
@@ -105,19 +148,19 @@ export default ({ data }) => {
               <h2>Exemples d'activités</h2>
               <Card>
                 <article>
-                  <h3>APPRENTIS PARFUMEUR</h3>
+                  <h3>Apprentis parfumeur</h3>
                   <p style={{ textAlign: "center" }}>
                     ½ journée en indoor ou outdoor, jardin, parc..
                   </p>
                   <div>
                     <div className="grid-article">
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.parfum.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                       <div className="activities__content">
                         <p>
                           Inscrire la cohésion d’équipe dans la mémoire
@@ -149,31 +192,31 @@ export default ({ data }) => {
                           making off et marketing.
                         </p>
                       </div>
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.parfumDeux.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </article>
                 <article>
-                  <h3>ESCAPE GAME OUTDOOR</h3>
+                  <h3>Escape game outdoor</h3>
                   <p style={{ textAlign: "center" }}>
                     journée ou ½ journée Cannes, Nice, Antibes, Saint Paul de
                     Vence, Gourdon, Entrevaux et toute autre ville en France..
                   </p>
                   <div className="activities">
                     <div className="grid-article">
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.food.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                       <div className="activities__content">
                         <p>
                           Muni d’un sac à dos remplis d’enveloppes de missions
@@ -215,31 +258,31 @@ export default ({ data }) => {
                           </li>
                         </ul>
                       </div>
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.foodDeux.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </article>
                 <article>
-                  <h3>BEACH GAMES</h3>
+                  <h3>Beach Game</h3>
                   <p style={{ textAlign: "center" }}>
                     30 à 400 participants pour ½ ou journée outdoor (Cannes,
                     Juan les Pins, St Laurent du Var, Antibes et le Var)
                   </p>
                   <div className="activities">
                     <div className="grid-article">
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.beach.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                       <div className="activities__content">
                         <p>
                           Les participants divisés en équipes s’affrontent en
@@ -276,31 +319,31 @@ export default ({ data }) => {
                           foot gonflable…
                         </p>
                       </div>
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.beachDeux.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </article>
                 <article>
-                  <h3>TRAINING CAMP</h3>
+                  <h3>Training Camp</h3>
                   <p style={{ textAlign: "center" }}>
                     journée ou ½ journée dans un parc naturel, une plage and
                     indoor ou outdoor
                   </p>
                   <div className="activities">
                     <div className="grid-article">
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.camp.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                       <div className="activities__content">
                         <p>
                           Découvrir un véritable ‘Training camp’ à la portée de
@@ -333,30 +376,30 @@ export default ({ data }) => {
                           academy, yoga
                         </p>
                       </div>
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.campDeux.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </article>
                 <article>
-                  <h3>COMMANDO CAMP</h3>
+                  <h3>Commando Camp</h3>
                   <p style={{ textAlign: "center" }}>
                     journée ou ½ journée dans un parc naturel
                   </p>
                   <div className="activities">
                     <div className="grid-article">
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.commando.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                       <div className="activities__content">
                         <p>
                           Entrainement façon ‘commando’ pour ceux qui désirent
@@ -390,13 +433,13 @@ export default ({ data }) => {
                           professionnels.
                         </p>
                       </div>
-                      {/* <div className="activities__image">
+                      <div className="activities__image">
                         <Img
                           style={{ width: "90%" }}
                           fluid={data.commandoDeux.childImageSharp.fluid}
                           alt="awesome landscape"
                         />
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </article>
@@ -409,77 +452,84 @@ export default ({ data }) => {
   )
 }
 
-// export const query = graphql`
-//   {
-//     parfum: file(relativePath: { eq: "parfum.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     parfumDeux: file(relativePath: { eq: "parfum2.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     food: file(relativePath: { eq: "food.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     foodDeux: file(relativePath: { eq: "food2.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     beach: file(relativePath: { eq: "beach.jpg" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     beachDeux: file(relativePath: { eq: "beach2.jpg" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     camp: file(relativePath: { eq: "camp.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     campDeux: file(relativePath: { eq: "camp2.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     commando: file(relativePath: { eq: "commando.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//     commandoDeux: file(relativePath: { eq: "commando2.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  {
+    parfum: file(relativePath: { eq: "parfum.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    teambuildingBcg: file(relativePath: { eq: "painting.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    parfumDeux: file(relativePath: { eq: "parfum2.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    food: file(relativePath: { eq: "food.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    foodDeux: file(relativePath: { eq: "food2.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    beach: file(relativePath: { eq: "beach.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    beachDeux: file(relativePath: { eq: "beach2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    camp: file(relativePath: { eq: "camp.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    campDeux: file(relativePath: { eq: "camp2.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    commando: file(relativePath: { eq: "commando.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    commandoDeux: file(relativePath: { eq: "commando2.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

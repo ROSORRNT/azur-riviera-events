@@ -13,6 +13,9 @@ export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
+        <Link to="/outdoor#randonees-parcs">Voyage Incentive</Link>
+      </li>
+      <li>
         <Link to="/outdoor#randonees-parcs">Randonnées - Parcs</Link>
       </li>
       <li>
@@ -31,8 +34,8 @@ export default ({ data }) => {
       <MainNavigation className="main-header" />
       <StyledHero img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
-          title="Voyage et Découvertes"
-          info="Voyages et séjours sur la Côte d’Azur."
+          title="Voyages et Découvertes"
+          info="Voyages et séjours sur la Côte d’Azur"
         >
           <Link to="/outdoor#randonees-parcs" className="button">
             Voir plus
@@ -44,49 +47,6 @@ export default ({ data }) => {
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
           <div>
-            <article>
-              <Card>
-                <h1 style={{ textAlign: "center" }}>
-                  UN FORMIDABLE TERRAIN DE JEUX
-                </h1>
-                <p>
-                  La Côte d’Azur offre de nombreuses escapades, des visites, des
-                  balades pour partir à la découverte de la culture, du
-                  patrimoine et des traditions.
-                </p>
-                <p>
-                  Nos visites guidées sont élaborées selon les thématiques
-                  souhaitées avec un service clé en main:
-                </p>
-
-                <ul
-                  style={{
-                    color: "var(--fontColorDark)",
-                    fontSize: "1.2rem",
-                  }}
-                >
-                  <li>- Guide professionnelle parlant plusieurs langues</li>
-                  <li>- Transport en voiture avec chauffeur ou mini-bus</li>
-                  <li>
-                    - Sélection de restaurant respectant les exigences de nos
-                    clients
-                  </li>
-                  <li>- Visites réservées avec accès “VIP”</li>
-                  <li>
-                    - Animations et ateliers avec des spécialistes (peintre
-                    céramiste, potier, souffleur de verre, viticulteur,
-                    parfumeur…).
-                  </li>
-                </ul>
-
-                <p>
-                  Nous vous ferons découvrir différentes facettes de notre
-                  région qui vous réservent de très belles surprises et des
-                  moments inoubliables.
-                </p>
-              </Card>
-            </article>
-
             <article id="randonees-parcs">
               <h1>Randonnées - Parcs Naturels et Jardins</h1>
               <Card>
@@ -145,7 +105,7 @@ export default ({ data }) => {
             </article>
 
             <article id="vtt-rally-regate">
-              <h1>VTT, RALLY, RÉGATE</h1>
+              <h1>Vtt, Rally, R</h1>
               <Card>
                 <div className="grid-article">
                   <div className="activities__image">
@@ -209,7 +169,7 @@ export default ({ data }) => {
             </article>
 
             <article id="canyonning">
-              <h1>CANYONING, RAFTING ET PARAPENTE</h1>
+              <h1>Canyoning, Rafting et Parapente</h1>
               <Card>
                 <div className="grid-article">
                   <div className="activities__image">

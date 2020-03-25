@@ -22,7 +22,7 @@
 
 .nav-links a {
   color: #0c3866;
-  border: 0.04rem solid #289eec;
+  border: 1px solid #ffcb3cee;
   border-radius: 0.2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.192);
   background-color: #2396e2;
