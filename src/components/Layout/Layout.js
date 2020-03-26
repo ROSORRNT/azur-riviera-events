@@ -8,7 +8,7 @@ import MainNavigation from "../Navigation/MainNavigation"
 import Card from "../UIElements/Card"
 import styles from "./../css/about.module.css"
 import Footer from "../UIElements/Footer"
-// import VedettePosts from "../Posts/VedettePosts"
+import VedettePosts from "../Blog/VedettePosts"
 
 const getImages = graphql`
   query Images {
@@ -308,7 +308,7 @@ const Layout = () => {
             </li>
           </ul>
         </section>
-        {/* <VedettePosts showDescrption={false} /> */}
+        <VedettePosts />
       </main>
 
       <Footer>
