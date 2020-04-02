@@ -1,7 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import { FaHandsHelping, FaGlobeAmericas, FaCommentDots } from "react-icons/fa"
+import {
+  FaHandsHelping,
+  FaGlobeAmericas,
+  FaCommentDots,
+  FaArrowAltCircleRight,
+} from "react-icons/fa"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
@@ -13,7 +18,7 @@ export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
-        <Link to="/entreprises#seminaires">Séminaires</Link>
+        <Link to="/entreprises#seminaires">Séminaire</Link>
       </li>
       <li>
         <Link to="/entreprises#conferences">Conférence</Link>
@@ -52,21 +57,20 @@ export default ({ data }) => {
           <SideNavigation anchorLinks={anchorLinksList} />
           <div>
             <Card>
+              <p>Un interlocuteur unique pour :</p>
               <p>
-                <FaHandsHelping /> Nous vous accompagnons pour vos
-                <strong> séminaires, conférences et team-building</strong> de la
-                conception à la réalisation.
+                <FaHandsHelping /> Vous conseiller et vous accompagner dans
+                l’organisation de vos séminaires, conférences de la conception à
+                la réalisation
               </p>
               <p>
-                <FaGlobeAmericas /> Pour vos
-                <strong> voyages d’affaires en France et à l’étranger</strong>,
-                nous sommes à vos côtés pour une organisation optimale!
+                <FaGlobeAmericas /> Vous préparer un programme sur mesure pour
+                vos voyages d’affaire en France et à l’étranger
               </p>
               <p>
-                <FaCommentDots /> Nous complétons notre offre en vous proposant
-                de vous accompagner dans votre
-                <strong> communication digitale indispensable</strong> pour
-                donner de la valeur ajoutée à votre événement. Pour plus d'infos{" "}
+                <FaCommentDots /> Vous assister pour mettre en place votre
+                communication digitale et donner du sens à votre événement. .
+                Pour plus d'infos{" "}
                 <span>
                   <Link to="/faq">voir notre FAQ.</Link>
                 </span>{" "}
@@ -86,31 +90,37 @@ export default ({ data }) => {
                   </div>
                   <div>
                     <h3>
-                      Un large réseau de
-                      <strong> partenaires</strong> locaux ou régionaux
-                      rigoureusement sélectionnés.
+                      {" "}
+                      <strong>
+                        {" "}
+                        Les ingrédients d’un séminaire réussi
+                      </strong>{" "}
                     </h3>
+                    <h4 style={{ textAlign: "center" }}>
+                      {" "}
+                      <FaArrowAltCircleRight /> Lieux, choix des prestataires,
+                      déroulé et logistique, accompagnement{" "}
+                    </h4>
                     <p>
-                      Dès que nous recevons votre demande, nous établissons
-                      ensemble un agenda de travail. Par des réunions
-                      régulières, nous vous tenons informés de l’état
-                      d’avancement de votre évènement.
-                    </p>
-                    <p>
-                      Nous vous conseillons sur le choix du lieu en fonction de
-                      la taille de votre groupe et de l’objectif de votre
-                      réunion.
+                      Nous sommes auprès de<strong> nos clients</strong> pour{" "}
+                      <strong>
+                        créer, concevoir et coordonner leur séminaire
+                        d’entreprise.
+                      </strong>
                     </p>
                   </div>
                 </div>
                 <div className="grid-article">
                   <div>
                     <p>
-                      Ensemble, nous effectuons des visites de repérage pour
-                      vous aider à choisir le lieu le mieux adapté à vos
-                      attentes. Selon vos besoins, nous vous donnons un devis
-                      détaillé de chaque prestation pour vous garantir des coûts
-                      maitrisés.
+                      Conseils dans le choix du lieu en fonction de vos budgets
+                      et objectifs.
+                      <br />
+                      <strong> Ensemble</strong>, nous préparons un planning de
+                      tâches et établissons un cahier des charges.{" "}
+                      <strong> Suivi et interlocuteur unique</strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J.
                     </p>
                     <p>
                       Nos activités de cohésion d’équipes{" "}
@@ -146,42 +156,48 @@ export default ({ data }) => {
                   </div>
                   <div>
                     <h3>
-                      Nous vous accompagnons dans la réalisation de vos
-                      séminaires de la conception jusqu’au jour J.
+                      {" "}
+                      <strong>
+                        {" "}
+                        Les ingrédients d’un séminaire réussi
+                      </strong>{" "}
                     </h3>
-                    <p>
-                      Dès que nous recevons votre demande, nous établissons
-                      ensemble un agenda de travail. Par des réunions
-                      régulières, nous vous tenons informés de l’état
-                      d’avancement de votre évènement.
-                    </p>
+                    <h4 style={{ textAlign: "justify" }}>
+                      {" "}
+                      <FaArrowAltCircleRight /> Excellente connaissance des
+                      espaces de congrès sur la Côte d’Azur, choix du lieu et
+                      des prestataires en concordance avec le projet et la
+                      thématique, logistique transport et hébergement, gestion
+                      des participants et communication{" "}
+                    </h4>
                   </div>
                 </div>
                 <div className="grid-article">
                   <div>
                     <p>
-                      Selon vos besoins, nous vous donnons un devis détaillé
-                      pour chaque prestation:
+                      Nous vous apportons notre expertise dans l’organisation de
+                      conférence pour{" "}
+                      <strong>
+                        {" "}
+                        respecter votre budget, vos contraintes géographiques,
+                        la gestion de vos invités pour leur déplacement et leur
+                        accueil.
+                      </strong>
                     </p>
-                    <ul>
-                      <li>- Recherche de lieux et d’hébergement</li>
-                      <li>- Location de salle et salles de sous-commission</li>
-                      <li>
-                        - Support de communication: signalétique, flyers, print,
-                        site internet.{" "}
-                      </li>
-                      <li>- Vidéo-conférence</li>
-                      <li>
-                        - Traiteur (café d’accueil, pauses, repas, cocktail)
-                      </li>
-                      <li>- Traducteur</li>
-                      <li>- Photographe</li>
-                      <li>- Attaché de presse</li>
-                      <li>
-                        - Transport et logistique de votre lieu d’hébergement
-                        sur le lieu de la conférence
-                      </li>
-                    </ul>
+                    <p>
+                      Pour tous les congrès organisés sur Nice, Cannes, Monaco…
+                      nous pouvons vous aider dans la{" "}
+                      <strong>
+                        réservation d’hôtels, villas, yacht, traiteurs et
+                        espaces de réceptions et toujours notre assistance pour
+                        la logistique.
+                      </strong>
+                    </p>
+                    <p>
+                      <strong> Suivi et interlocuteur unique </strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J.
+                    </p>
                   </div>
                   <div className="activities__image">
                     <Img
@@ -201,53 +217,47 @@ export default ({ data }) => {
                   <div className="activities__image">
                     <Img
                       style={{ width: "90%" }}
-                      fluid={data.confTwo.childImageSharp.fluid}
+                      fluid={data.commOne.childImageSharp.fluid}
                       alt="awesome landscape"
                     />{" "}
                   </div>
                   <div>
-                    <h3>
-                      Nous vous accompagnons dans la réalisation de vos
-                      séminaires de la conception jusqu’au jour J.
-                    </h3>
+                    <h4 style={{ textAlign: "center" }}>
+                      Grâce à la personnalisation de nos produits, nous mettons
+                      le digital au cœur de votre événement avec nos outils de
+                      communication globale.
+                    </h4>
                     <p>
-                      Dès que nous recevons votre demande, nous établissons
-                      ensemble un agenda de travail. Par des réunions
-                      régulières, nous vous tenons informés de l’état
-                      d’avancement de votre évènement.
+                      A partir de la gestion de votre événement professionnel,
+                      nous évaluons ensemble vos besoins en supports de
+                      communication digitaux et graphiques, et nous associons à
+                      la création de votre concept :
                     </p>
                   </div>
                 </div>
                 <div className="grid-article">
                   <div>
-                    <p>
-                      Selon vos besoins, nous vous donnons un devis détaillé
-                      pour chaque prestation:
-                    </p>
-                    <ul>
-                      <li>- Recherche de lieux et d’hébergement</li>
-                      <li>- Location de salle et salles de sous-commission</li>
+                    <ul className="page--list">
                       <li>
-                        - Support de communication: signalétique, flyers, print,
-                        site internet.{" "}
+                        - Plateforme de gestion des participants et site
+                        internet dédié sécurisant les données
                       </li>
-                      <li>- Vidéo-conférence</li>
                       <li>
-                        - Traiteur (café d’accueil, pauses, repas, cocktail)
+                        - Création et impression des cartons d’invitation,
+                        flyers, signalétique, badges électroniques
                       </li>
-                      <li>- Traducteur</li>
-                      <li>- Photographe</li>
-                      <li>- Attaché de presse</li>
                       <li>
-                        - Transport et logistique de votre lieu d’hébergement
-                        sur le lieu de la conférence
+                        - Animation des réseaux sociaux, relation presse,
+                        contenus{" "}
                       </li>
+                      <li>- Conception graphique, scénographie</li>
+                      <li>- Coordinateur sur place pour la logistique</li>
                     </ul>
                   </div>
                   <div className="activities__image">
                     <Img
                       style={{ width: "90%" }}
-                      fluid={data.conf.childImageSharp.fluid}
+                      fluid={data.commTwo.childImageSharp.fluid}
                       alt="awesome landscape"
                     />{" "}
                   </div>
@@ -267,40 +277,31 @@ export default ({ data }) => {
                     />{" "}
                   </div>
                   <div>
+                    <h4 style={{ textAlign: "center" }}>
+                      De la conception à la réalisation de vos événements et
+                      voyage au sein de votre entreprise.{" "}
+                    </h4>
                     <p>
-                      Nous vous conseillons sur le choix du lieu en fonction de
-                      la taille de votre groupe et de l’objectif de votre
-                      réunion.
-                      <br />
-                      Ensemble, nous effectuons des visites de repérage pour
-                      vous aider à choisir le lieu le mieux adapté à vos
-                      attentes. Selon vos besoins, nous vous donnons un devis
-                      détaillé de chaque prestation pour vous garantir des coûts
-                      maitrisés.
-                    </p>
-                    <p>
-                      Vous pouvez puiser quelques idées dans notre catalogue
-                      d’activités en mer, à la montagne ou à la campagne.
+                      Nous vous apportons nos idées et concepts pour que les
+                      salariés de votre entreprise puissent bénéficier
+                      d’activités originales, éthiques et en respect avec vos
+                      valeurs sociétales. .
                     </p>
                   </div>
                 </div>
                 <div className="grid-article">
                   <div>
                     <p>
-                      Nous saurons nous adapter à vos budgets pour organiser vos
-                      manifestations familiales avec ou sans hébergement:
+                      Organisation d’ arbre de Noël et dîner de gala, départ
+                      retraites, récompenses, célébration, voyage de fin
+                      d’année…, nous créerons ensemble un événement festif
+                      unique, sur mesure et inoubliable.
                     </p>
-                    <ul>
-                      <li>- Kart, motoneige, VTT</li>
-                      <li>- Baptême parapente</li>
-                      <li>
-                        - Week end sur le thème “Nos chères colonies de vacances
-                      </li>
-                      <li>
-                        - Jeux de plages, course d’orientation, rallye sur mer
-                        et en ville.
-                      </li>
-                    </ul>
+                    <p>
+                      <strong> Suivi et interlocuteur unique </strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J.
+                    </p>
                   </div>
                   <div className="activities__image">
                     <Img
@@ -325,40 +326,47 @@ export default ({ data }) => {
                     />{" "}
                   </div>
                   <div>
-                    <p>Vous recherchez un transport durant votre séjour ?</p>
+                    <h4 style={{ textAlign: "center" }}>
+                      Organisation de tous types de déplacements.{" "}
+                    </h4>
                     <p>
-                      Pour accueillir vos clients à l’aéroport, choisissez
-                      l’excellence et un service personnalisé avec un hôte qui
-                      se chargera de leur transport sur le lieu de la résidence.
-                    </p>
-                    <p>
-                      Nous vous apportons toutes nos solutions avec nos
-                      prestataires pour vous permettre de vous déplacer à votre
-                      guise dans la région:
+                      Pour optimiser vos coûts de déplacements,{" "}
+                      <strong>
+                        {" "}
+                        nous avons sélectionné des prestaires fiables avec un
+                        service personnalisé garantissant des critères de
+                        sécurité.
+                      </strong>
                     </p>
                   </div>
                 </div>
                 <div className="grid-article">
                   <div>
                     <ul style={{ lineHeight: "1.5rem" }}>
-                      <li>- Voiture avec chauffeur jusqu’à 8 personnes</li>
                       <li>
-                        - Minibus ou autocars de tourisme pour vos groupes
+                        -{" "}
+                        <strong>
+                          Voiture avec chauffeur jusqu’à 8 personnes
+                        </strong>
                       </li>
                       <li>
-                        - Hélicoptère pour vous amener rapidement sur Monaco
-                        mais aussi pour vous rendre sur des sites dans l’arrière
-                        pays
+                        - <strong>Autocars de tourisme</strong>
                       </li>
                       <li>
-                        - Yacht, voilier, catamaran pour vos vacances ou pour
-                        vivre une expérience fabuleuse sur une journée le long
-                        du littoral.
+                        - <strong>Hélicoptère ou avion privé</strong>
+                      </li>
+                      <li>
+                        -{" "}
+                        <strong>
+                          Yacht, voilier pour vos loisirs ou vos rendez-vous
+                          professionnels
+                        </strong>
                       </li>
                     </ul>
                     <p>
-                      Fiabilité, confiance, qualité, sécurité sont nos critères
-                      pour vous garantir des services haut de gamme.
+                      <strong> Suivi et interlocuteur unique </strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J.
                     </p>
                   </div>
                   <div className="activities__image">
@@ -395,6 +403,20 @@ export const query = graphql`
       }
     }
     confTwo: file(relativePath: { eq: "conf2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    commOne: file(relativePath: { eq: "comm0.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    commTwo: file(relativePath: { eq: "comm1.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp

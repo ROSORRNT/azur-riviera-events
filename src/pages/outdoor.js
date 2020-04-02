@@ -1,7 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-
+import {
+  FaHandsHelping,
+  FaPenAlt,
+  FaGlobeAmericas,
+  FaCommentDots,
+  FaArrowAltCircleRight,
+} from "react-icons/fa"
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
 import Card from "../components/UIElements/Card"
@@ -13,7 +19,7 @@ export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
-        <Link to="/outdoor#randonees-parcs">Voyage Incentive</Link>
+        <Link to="/outdoor#voyage-incentive">Voyage Incentive</Link>
       </li>
       <li>
         <Link to="/outdoor#randonees-parcs">Randonnées - Parcs</Link>
@@ -47,6 +53,81 @@ export default ({ data }) => {
         <section className="grid-container">
           <SideNavigation anchorLinks={anchorLinksList} />
           <div>
+            <Card>
+              <p>
+                Une agence <strong> DMC sur la Côte d’Azur</strong> avec un
+                interlocuteur unique pour :
+              </p>
+              <p>
+                <FaHandsHelping /> Vous conseiller et vous accompagner dans
+                l’organisation de{" "}
+                <strong>vos séjours professionnels ou privés</strong>
+              </p>
+              <p>
+                <FaPenAlt /> Vous préparer un programme sur mesure pour{" "}
+                <strong>vos voyages d’affaire en France et à l’étranger</strong>
+                <span>
+                  {" "}
+                  <Link to="/faq">voir notre FAQ.</Link>
+                </span>
+              </p>
+            </Card>
+
+            <article id="voyage-incentive">
+              <h1>Voyage incentive </h1>
+              <Card>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.incentiveTwo.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                  <div>
+                    <h3>
+                      Organisation de voyages et d’activités dépaysantes dans un
+                      autre pays.
+                    </h3>
+                    <p>
+                      Vous souhaitez{" "}
+                      <strong>
+                        dynamiser vos équipes ou remercier vos clients
+                      </strong>
+                      , nous sommes à votre écoute pour organiser votre voyage
+                      professionnel et vous ouvrir notre réseau de partenaires
+                      pour vous offrir une{" "}
+                      <strong>expérience inoubliable.</strong>
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div>
+                    <h4 style={{ textAlign: "center" }}>
+                      {" "}
+                      Sécurité, expérience, accompagnement, coûts maîtrisés :
+                    </h4>
+                    <p>
+                      Des objectifs qui sont pour nous{" "}
+                      <strong>incontournables</strong>.
+                    </p>
+                    <p>
+                      <strong>Suivi et interlocuteur unique</strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J ; nous ne vous quittons jamais et partons
+                      avec vous si souhaité!!
+                    </p>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.incentiveOne.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />{" "}
+                  </div>
+                </div>
+              </Card>
+            </article>
             <article id="randonees-parcs">
               <h1>Randonnées - Parcs Naturels et Jardins</h1>
               <Card>
@@ -105,7 +186,7 @@ export default ({ data }) => {
             </article>
 
             <article id="vtt-rally-regate">
-              <h1>Vtt, Rally, R</h1>
+              <h1>Vtt, Rally, Régate</h1>
               <Card>
                 <div className="grid-article">
                   <div className="activities__image">
@@ -287,6 +368,20 @@ export const query = graphql`
       }
     }
     rafting: file(relativePath: { eq: "rafting.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    incentiveOne: file(relativePath: { eq: "incentiveOne.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    incentiveTwo: file(relativePath: { eq: "incentiveTwo.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp

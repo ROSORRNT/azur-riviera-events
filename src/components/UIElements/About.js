@@ -28,13 +28,6 @@ const getAbout = graphql`
         }
       }
     }
-    charte: file(relativePath: { eq: "charte.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     enedis: file(relativePath: { eq: "enedis.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
@@ -64,13 +57,20 @@ const getAbout = graphql`
         }
       }
     }
+    charteOne: file(relativePath: { eq: "charteOne.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
 const About = () => {
   const {
     aboutImage,
-    charte,
+    charteOne,
     enedis,
     kone,
     laLigue,
@@ -155,30 +155,36 @@ const About = () => {
             <article id="experiences">
               <h2> Expériences</h2>
               <Card>
-                <h3>25 ans au service de la clientèle internationale.</h3>
+                <h3>Au service de clients exigeants</h3>
                 <p>
-                  La création de l’agence par sa fondatrice Patricia Le Bras,
-                  résulte de 15 années d’expérience dans l’hôtellerie de luxe
-                  dans les domaines du management et du commercial. Passionnée
-                  par son métier, elle a décidé de s’orienter vers
-                  l’évènementiel pour fournir à ses clients des services
-                  personnalisés répondant à leurs attentes.
+                  Pendant 15 années à travailler dans les plus beaux palaces
+                  français, j’avais l’impression de voyager dès que je saluais
+                  le portier chaque matin en entrant dans l’hôtel, de ne jamais
+                  faire la même chose et d’avoir la possibilité de gérer des
+                  équipes, avec l’objectif de donner un service irréprochable.
+                  Excellence du service, exigence, qualité et management sont
+                  des acquis indissociables de cette première partie de ma vie.
                 </p>
                 <p>
-                  Sa vision du service et ses objectifs sont d’apporter à ses
-                  clients des projets sur-mesure de qualité grâce à des coûts
-                  maitrisés. La conception même des évènements est véhiculée par
-                  l’organisation, par le management et le conseil.
+                  Après un diplôme universitaire dans l’événementiel et la
+                  communication, je crée en 2005 mon agence événementielle avec
+                  une immatriculation d’agence de voyages qui me donne la
+                  légitimité d’organiser tous types d’événements.
                 </p>
                 <p>
-                  Depuis 2005, l’agence propose le meilleur service à ses
-                  fidèles clients
+                  Le sud de la France est un formidable terrain de jeu… je vis
+                  au milieu de patrimoines culturels exceptionnels qu’il faut
+                  protéger, j’ai fait des rencontres avec des personnes venant
+                  d’horizons différents culturellement et socialement et tout
+                  cela correspondent à mes aspirations. Je veux les partager
+                  avec mes clients ainsi que ma vision : savant mélange
+                  d’éthique, d’écologie, de solidarité, d’empathie à l’image de{" "}
+                  <span>
+                    {" "}
+                    <Link to="/about#charte">la charte de mes valeurs.</Link>
+                  </span>{" "}
                 </p>
-                <p>
-                  Attachée à l’idée d’une relation saine et pérenne avec ses
-                  prestataires, Azur Riviera Prestations s’inscrit dans une
-                  démarche de création d’évènements uniques et personnalisés.
-                </p>
+                <p>Patricia LE BRAS – fondatrice d’Azur Riviera Events</p>
               </Card>
             </article>
             <br />
@@ -191,11 +197,14 @@ const About = () => {
                 <div className="grid-article">
                   <div className={styles.imgContainer}>
                     <Img
-                      fluid={charte.childImageSharp.fluid}
+                      fluid={charteOne.childImageSharp.fluid}
                       alt="awesome landscape"
                     />
                   </div>
-                  <ul className={styles.aboutList}>
+                  <ul
+                    className={styles.aboutList}
+                    style={{ paddingTop: "1.6rem" }}
+                  >
                     <li>
                       {" "}
                       <strong>Passion</strong> : partager un projet commun
@@ -251,7 +260,8 @@ const About = () => {
                   <strong> tous vos projets</strong>.
                 </p>
                 <p>
-                  Nous avons fidélisé depuis plus de 10 ans,{" "}
+                  Nnous avons fidélisé depuis la création de l’agence
+                  événementielle,
                   <strong> des professionnels reconnus </strong> pour leur
                   compétence, leur savoir faire et leur disponibilité créant la
                   confiance et la synergie indispensables à la réussite d’un

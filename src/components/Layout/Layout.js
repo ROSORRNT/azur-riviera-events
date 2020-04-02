@@ -33,7 +33,7 @@ const getImages = graphql`
         }
       }
     }
-    comiteEntreprise: file(relativePath: { eq: "team.jpg" }) {
+    comiteEntreprise: file(relativePath: { eq: "team2.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -90,33 +90,25 @@ const Layout = () => {
             </article>{" "}
             <article className={styles.aboutInfo}>
               <Card style={{ marginTop: "1rem" }}>
-                <p style={{ width: "90%", textAlign: "justify" }}>
-                  Notre métier est de rendre vos{" "}
-                  <strong>événements uniques</strong>, personnalisés et de les
-                  concevoir pour qu’ils soient{" "}
-                  <strong> à l’image de votre entreprise</strong>, correspondent
-                  à<strong> vos rêves</strong>, répondent à{" "}
-                  <strong> vos exigences</strong>. La maîtrise de plusieurs
-                  compétences concentrées au sein d’une seule et même agence
-                  vous offre un service <strong>sur-mesure</strong> et sans
-                  intermédiaires.{" "}
+                <p className="home--text">
+                  <strong>AZUR RIVIERA EVENTS</strong> est une agence
+                  événementielle et de tourisme basée à NICE depuis 2005.{" "}
                 </p>
-                <p style={{ width: "90%", textAlign: "justify" }}>
-                  {" "}
-                  Nous pouvons aussi nous charger de votre{" "}
-                  <strong>communication digitale</strong>
-                  autour de votre événement pour que vous puissiez vous reposer
-                  sur un partenaire qui comprend <strong> vos objectifs</strong>
-                  , vous apporte ses
-                  <strong> conseils et assistance</strong>, soit à vos côtés
-                  pour qu’ainsi vous puissiez vous sentir serein le jour J.{" "}
+                <p className="home--text">
+                  <strong> Notre savoir-faire</strong> : créer et concevoir vos
+                  événements professionnels ultra-personnalisés pour qu'ils
+                  soient à l'image de vos valeurs et de vos objectifs.
                 </p>
-                <p style={{ width: "90%", textAlign: "justify" }}>
-                  {" "}
+                <p className="home--text">
+                  Toutes les compétences sont réunies{" "}
+                  <strong> au sein d'une même agence</strong>
+                  pour vous offrir une panoplie de services autour de
+                  l'événementiel, du tourisme et de la communication.
+                </p>
+                <p className="home--text">
                   Nous vous garantissons des prestations de qualité grâce aux
                   engagements que nous avons pris avec nos prestataires qui ont
-                  adhéré à la
-                  <strong> charte de nos valeurs</strong>.
+                  adhéré à la <strong>charte de nos valeurs</strong>.
                 </p>
               </Card>
             </article>
@@ -133,30 +125,26 @@ const Layout = () => {
           <div className="plan__list">
             <article className="plan plan--highlighted__enterprises">
               <h1 className="plan__title--dark plan--shadow">
-                Evènements d’entreprises
+                EVENEMENTS ENTREPRISES
               </h1>
               <h2 className="plan__annotation">
-                Séminaires Conférences <br />
-                Comité d'entreprise <br />
-                Transport - Yatching
+                Séminaire Conférence <br />
+                Communication Logistique
+                <br />
+                Comité d'entreprise
               </h2>
-              <h3>Nous sommes à vos côtés pour une organisation optimale! </h3>
+              <h3>
+                Nous sommes à vos côtés pour une organisation optimale et
+                personnalisée{" "}
+              </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  De la conception à la réalistation
+                  <strong>Interlocuteur unique</strong>, expertise, conseil
                 </li>
+
                 <li className="plan__feature">
-                  Pour vos{" "}
-                  <strong> séminaires, conférences et team-building</strong>
-                </li>
-                <li className="plan__feature">
-                  Pour vos{" "}
-                  <strong> voyages d’affaires en France et à l’étranger</strong>
-                </li>
-                <li className="plan__feature">
-                  Un réseau de partenaires et fournisseurs rigoureusement
-                  sélectionnés en matière de sécurité, d’éthique, de respect des
-                  coûts et des délais.
+                  Large réseau de prestataires pour créer avec vous un{" "}
+                  <strong> événement innovant </strong>et sur-mesure.
                 </li>
               </ul>
               <div>
@@ -169,30 +157,35 @@ const Layout = () => {
 
             <article className="plan plan--highlighted__teambuilding">
               <h1 className="plan__title--dark plan--shadow">
-                Cohésion d’équipe
+                COHESION D’EQUIPES
               </h1>
               <h2 className="plan__annotation">
                 {" "}
                 Sport et <br />
-                Culture{" "}
+                Culture <br /> Challenge <br /> Performance
               </h2>
-              <h3>Divertir, Fédérer, Sensibiliser vos équipes.</h3>
+              <h3>
+                Divertir, fédérer, sensibiliser, motiver vos équipes sur la Côte
+                d’Azur
+              </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  Des activités conçues spécialement pour les entreprises de
-                  toutes tailles.{" "}
-                </li>
-                <li className="plan__feature">
-                  Nous nous inscrivons dans une démarche solidaire et limitant
-                  l’impact sur l’environnement.
+                  Nous concevons des{" "}
+                  <strong> activités, animations, jeux d’entreprise </strong> de
+                  toutes tailles adaptés aux besoins et stratégies des
+                  entreprises.
                 </li>
                 <li className="plan__feature">
                   Nous mettons en avant la culture, le dépassement de soi, la
                   convivialité, le partage.
                 </li>
                 <li className="plan__feature">
-                  Continuez à travers ces animations à véhiculer les valeurs
-                  fortes de votre entreprise.
+                  Notre démarche est solidaire en limitant l’impact sur
+                  l’environnement.
+                </li>
+                <li className="plan__feature">
+                  Continuez à travers ces animations à véhiculer{" "}
+                  <strong> les valeurs fortes de votre entreprise</strong>.
                 </li>
               </ul>
               <div>
@@ -204,26 +197,28 @@ const Layout = () => {
 
             <article className="plan plan--highlighted__outdoor">
               <h1 className="plan__title--dark plan--shadow">
-                Voyage et découvertes sur la Côte d’Azur.
+                VOYAGE ET DECOUVERTE
               </h1>
               <h2 className="plan__annotation">
                 {" "}
-                Randonnées - Parcs VTT, Rally, Régate Canyonning, Rafting,
-                Parapente{" "}
+                Réceptif <br /> Loisirs <br /> Visites et activités sportives et
+                culturelles <br /> Excursions
               </h2>
-              <h3>Voyages et séjours sur la Côte d’Azur.</h3>
+              <h3>
+                Séjours et voyages d’affaires et incentive dans la région Sud,
+                Provence, Alpes et Côte d’Azur .
+              </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  Organisez
-                  <strong> vos voyages et séjours </strong> sur la Côte d’Azur{" "}
-                  pour partir à la découverte d’une région pleine de surprises!
+                  Nous choisissons et organisons <strong> vos séjours </strong>
+                  pour partir à la découverte d’une région pleine de{" "}
+                  <strong> belles surprises</strong>, de la Méditerranée aux
+                  massifs provençaux.
                 </li>
                 <li className="plan__feature">
-                  Rencontres avec des passionnés au savoir-faire millénaire,
-                  apprentissage des cultures et tradition…
-                </li>
-                <li className="plan__feature">
-                  Attendez-vous à vivre des moments inoubliables !
+                  Des lieux mythiques aux sites préservés, nous vous ferons
+                  vivre <strong> des moments inoubliables </strong>et vous faire
+                  partager notre sens de l’écoresponsabilité.
                 </li>
               </ul>
               <div>
@@ -251,25 +246,25 @@ const Layout = () => {
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Link to="/entreprises#transport">
+                <Link to="/outdoor">
                   <Img
                     style={{ borderRadius: "50%" }}
                     fluid={data.sejoursEntreprise.childImageSharp.fluid}
                   />
                 </Link>
               </div>
-              <p className="key-feature__description">Séjours entreprises</p>
+              <p className="key-feature__description">Voyage</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">
-                <Link to="/entreprises#comite">
+                <Link to="/entreprises#seminaires">
                   <Img
                     style={{ borderRadius: "50%" }}
                     fluid={data.comiteEntreprise.childImageSharp.fluid}
                   />
                 </Link>
               </div>
-              <p className="key-feature__description">Comité d'entreprise</p>
+              <p className="key-feature__description">Evénements entreprises</p>
             </li>
             <li className="key-feature">
               <div className="key-feature__image">

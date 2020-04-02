@@ -1,7 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
-
+import {
+  FaHandsHelping,
+  FaPenAlt,
+  FaGlobeAmericas,
+  FaCommentDots,
+  FaArrowAltCircleRight,
+} from "react-icons/fa"
 import MainNavigation from "../components/Navigation/MainNavigation"
 import SideNavigation from "../components/Navigation/SideNavigation"
 import Banner from "../components/UIElements/Banner"
@@ -14,11 +20,12 @@ export default ({ data }) => {
   const anchorLinksList = (
     <React.Fragment>
       <li>
-        <Link to="/teambuilding#sport-culture">Sport et Culture</Link>
+        <Link to="/teambuilding#ateliers">Activités team building </Link>
       </li>
       <li>
-        <Link to="/teambuilding#ateliers">Catalogue</Link>
+        <Link to="/teambuilding#sport-culture">Sport et Culture</Link>
       </li>
+
       <li>
         <Link to="/strongpoints">Points forts</Link>
       </li>
@@ -44,21 +51,16 @@ export default ({ data }) => {
           <SideNavigation anchorLinks={anchorLinksList} />
           <div>
             <Card>
+              <p>Un interlocuteur unique pour :</p>
               <p>
-                Nous vous accompagnons pour vos
-                <strong> séminaires, conférences et team-building</strong> de la
-                conception à la réalisation.
+                <FaHandsHelping /> Vous conseiller et vous accompagner dans
+                l’organisation et la conception de{" "}
+                <strong> vos activités ludiques</strong>
               </p>
               <p>
-                Pour vos
-                <strong> voyages d’affaires en France et à l’étranger</strong>,
-                nous sommes à vos côtés pour une organisation optimale!
-              </p>
-              <p>
-                Nous complétons notre offre en vous proposant de vous
-                accompagner dans votre
-                <strong> communication digitale indispensable</strong> pour
-                donner de la valeur ajoutée à votre événement. Pour plus d'infos{" "}
+                <FaPenAlt /> Vous apporter nos idées pour{" "}
+                <strong> stimuler</strong> vos équipes professionnelles et
+                répondre à vos défis
                 <span>
                   <Link to="/faq">voir notre FAQ.</Link>
                 </span>
@@ -67,85 +69,59 @@ export default ({ data }) => {
             <br />
             <article>
               <Card>
-                <h1 style={{ textAlign: "center" }}>
+                <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>
                   Un formidable terrain de jeux
                 </h1>
-                <p>
-                  La Côte d’Azur offre de nombreuses escapades, des visites, des
-                  balades pour partir à la découverte de la culture, du
-                  patrimoine et des traditions.
-                </p>
-                <p>
-                  Nos visites guidées sont élaborées selon les thématiques
-                  souhaitées avec un service clé en main:
-                </p>
-
-                <ul
-                  style={{
-                    color: "var(--fontColorDark)",
-                    fontSize: "1.2rem",
-                  }}
-                >
-                  <li>- Guide professionnelle parlant plusieurs langues</li>
-                  <li>- Transport en voiture avec chauffeur ou mini-bus</li>
-                  <li>
-                    - Sélection de restaurant respectant les exigences de nos
-                    clients
-                  </li>
-                  <li>- Visites réservées avec accès “VIP”</li>
-                  <li>
-                    - Animations et ateliers avec des spécialistes (peintre
-                    céramiste, potier, souffleur de verre, viticulteur,
-                    parfumeur…).
-                  </li>
-                </ul>
-
-                <p>
-                  Nous vous ferons découvrir différentes facettes de notre
-                  région qui vous réservent de très belles surprises et des
-                  moments inoubliables.
-                </p>
-              </Card>
-            </article>
-
-            <article id="sport-culture">
-              <h1>Sport et Culture</h1>
-              <Card>
-                <p>
-                  Nous vous accompagnons dans la réalisation de vos séminaires
-                  de la conception jusqu’au jour J. Vous bénéficiez de notre
-                  connaissance de la région, de notre large réseau de
-                  <strong>partenaires</strong> locaux ou régionaux
-                  rigoureusement sélectionnés.
-                </p>
-                <p>
-                  Dès que nous recevons votre demande, nous établissons ensemble
-                  un agenda de travail. Par des réunions régulières, nous vous
-                  tenons informés de l’état d’avancement de votre évènement.
-                </p>
-                <p>
-                  Nous vous conseillons sur le choix du lieu en fonction de la
-                  taille de votre groupe et de l’objectif de votre réunion.
-                  <br />
-                  Ensemble, nous effectuons des visites de repérage pour vous
-                  aider à choisir le lieu le mieux adapté à vos attentes. Selon
-                  vos besoins, nous vous donnons un devis détaillé de chaque
-                  prestation pour vous garantir des coûts maitrisés.
-                </p>
-                <p>
-                  Nos activités de cohésion d’équipes{" "}
-                  <strong> (team building ou team learning)</strong> vous sont
-                  aussi proposées pour agrémenter votre séminaire. Il est
-                  aujourd’hui incontournable pour mieux se connaître, de
-                  participer à ces animations ludiques, sportives ou culturelles
-                  dans le cadre de réunion avec vos collaborateurs ou vos
-                  clients.
-                </p>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.terrainJeuTwo.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div className="activities__content">
+                    <p>
+                      <strong> La région Sud offre</strong> de magnifiques lieux
+                      pour organiser des animations sportives, culturelles, des
+                      challenges, des escapades et des découvertes de
+                      savoir-faire écoresponsables.
+                    </p>
+                    <p>
+                      Nos activités et la façon dont nous créons{" "}
+                      <strong> une ambiance conviviale</strong> génèrent chez
+                      les participants un sentiment d’appartenance et développe
+                      <strong> un tissu relationnel fort</strong> au sein des
+                      équipes.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div className="activities__content">
+                    <p>
+                      Pour vos séminaires et conférences, nous avons des
+                      concepts pour <strong>animer vos soirées</strong> et vos
+                      interludes quelque soit le nombre de personnes.
+                    </p>
+                    <p>
+                      <strong> Suivi et interlocuteur unique</strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J.
+                    </p>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.terrainJeu.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                </div>
               </Card>
             </article>
 
             <section id="ateliers">
-              <h2>Exemples d'activités</h2>
+              <h2>Activités team building </h2>
               <Card>
                 <article>
                   <h3>Apprentis parfumeur</h3>
@@ -445,6 +421,56 @@ export default ({ data }) => {
                 </article>
               </Card>
             </section>
+            <article id="sport-culture">
+              <h1>Sport et Culture</h1>
+              <Card>
+                <div className="grid-article">
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.sportOne.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div className="activities__content">
+                    <h3>Vous êtes passionnés de sport et/ou de culture?</h3>
+                    <p style={{ marginTop: "0" }}>
+                      Séjours « all inclusive » pour assister à de grandes
+                      compétitions sportives qui ont lieu sur la Côte d’Azur :
+                    </p>
+                    <ul style={{ marginTop: "0" }} className="page--list">
+                      <li>- Grand Prix de Monaco de F1</li>
+                      <li>- Grand Prix de France de F1</li>
+                      <li>
+                        - Herculis, Iron Man, Marathon, compétitions de golfs
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="grid-article">
+                  <div className="activities__content">
+                    <p>Festival de musique et manifestations culturelles : </p>
+                    <ul className="page--list">
+                      <li>- Carnaval de Nice et de Menton</li>
+                      <li>- Festival de Cannes</li>
+                      <li>- Voiles d’Antibes, Cannes et St Tropez</li>
+                    </ul>
+                    <p>
+                      <strong> Suivi et interlocuteur unique</strong> pour vous
+                      assister tout au long de la préparation et être à vos
+                      côtés le jour J.
+                    </p>
+                  </div>
+                  <div className="activities__image">
+                    <Img
+                      style={{ width: "90%" }}
+                      fluid={data.cultureOne.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                </div>
+              </Card>
+            </article>
           </div>
         </section>
       </main>
@@ -469,6 +495,20 @@ export const query = graphql`
       }
     }
     parfumDeux: file(relativePath: { eq: "parfum2.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    terrainJeu: file(relativePath: { eq: "default-3.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    terrainJeuTwo: file(relativePath: { eq: "vueCollinechateau.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -525,6 +565,20 @@ export const query = graphql`
       }
     }
     commandoDeux: file(relativePath: { eq: "commando2.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sportOne: file(relativePath: { eq: "sportOne.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    cultureOne: file(relativePath: { eq: "culturaOne.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
