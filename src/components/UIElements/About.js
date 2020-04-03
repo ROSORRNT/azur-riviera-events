@@ -50,6 +50,27 @@ const getAbout = graphql`
         }
       }
     }
+    kone: file(relativePath: { eq: "kone.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villeDeNice: file(relativePath: { eq: "villeDeNice.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    rioch: file(relativePath: { eq: "rioch.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     caisseEpargne: file(relativePath: { eq: "caisseEpargne.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
@@ -74,6 +95,7 @@ const About = () => {
     enedis,
     kone,
     laLigue,
+    rioch,
     amadeus,
     caisseEpargne,
     villeDeNice,
@@ -193,7 +215,9 @@ const About = () => {
                 Charte de nos valeurs
               </h2>
               <Card>
-                <h3>Nous portons attention au sens de nos actions.</h3>
+                <h3 style={{ marginBottom: "0.5rem" }}>
+                  Nous portons attention au sens de nos actions.
+                </h3>
                 <div className="grid-article">
                   <div className={styles.imgContainer}>
                     <Img
@@ -313,23 +337,46 @@ const About = () => {
                     />
                   </div>
 
-                  <div style={{ width: "50%", height: "auto" }}>
-                    <Img
-                      fluid={laLigue.childImageSharp.fluid}
-                      alt="awesome landscape"
-                    />
-                  </div>
-                </div>
-                <div className="grid-article-col">
                   <div>
                     <Img
                       fluid={amadeus.childImageSharp.fluid}
                       alt="awesome landscape"
                     />
                   </div>
-                  <div>
+                  <div style={{ width: "70%", height: "auto" }}>
+                    <Img
+                      fluid={kone.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                </div>
+                <div className="grid-article-col">
+                  <div style={{ width: "80%", height: "auto" }}>
                     <Img
                       fluid={caisseEpargne.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div style={{ width: "70%", height: "auto" }}>
+                    <Img
+                      fluid={villeDeNice.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      width: "50%",
+                      height: "auto",
+                    }}
+                  >
+                    <Img
+                      fluid={rioch.childImageSharp.fluid}
+                      alt="awesome landscape"
+                    />
+                  </div>
+                  <div style={{ width: "70%", height: "auto" }}>
+                    <Img
+                      fluid={laLigue.childImageSharp.fluid}
                       alt="awesome landscape"
                     />
                   </div>

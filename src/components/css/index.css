@@ -417,6 +417,10 @@ article .home--text {
   justify-content: center;
   align-items: center;
 }
+.grid-article-item {
+  justify-content: center;
+  align-items: center;
+}
 
 .devis__title h4 {
   margin-top: 1rem;
