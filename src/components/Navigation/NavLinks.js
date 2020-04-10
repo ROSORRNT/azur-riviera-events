@@ -9,7 +9,7 @@ const NavLinks = () => {
     <React.Fragment>
       <li>
         <AniLink fade to="/entreprises" activeClassName="active">
-          Evènements d'entreprise
+          Evénements d'entreprise
         </AniLink>
       </li>
       <li>

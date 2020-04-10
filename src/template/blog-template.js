@@ -20,6 +20,22 @@ const Blog = ({ data }) => {
           <img width="700" src={node.data.target.fields.file["en-US"].url} />
         )
       },
+      // "embedded-entry-block": node => {
+      //   const { title, images, description } = node.data.target.fields
+      //   return (
+      //     <div>
+      //       <br />
+      //       <br />
+      //       <br />
+      //       <br />
+      //       <h1>Mon autre poste : {title["en-US"]}</h1>
+      //       <br />
+      //       <br />
+      //       <br />
+      //       <br />
+      //     </div>
+      //   )
+      // },
     },
   }
 
@@ -31,7 +47,9 @@ const Blog = ({ data }) => {
           <h1>{title}</h1>
           <h4>Publié le : {published} </h4>
           <article className={styles.post}>
-            <Card style={{background: "#fdfde1"}} >{documentToReactComponents(json, options)}</Card>
+            <Card style={{ background: "#fdfde1" }}>
+              {documentToReactComponents(json, options)}
+            </Card>
           </article>
           <AniLink fade to="/news" className="btn-primary">
             Actualites

@@ -17,7 +17,8 @@ const Banner = ({ color, title, info, children }) => {
         style={{
           fontSize: "2rem",
           color: "var(--fontColorDark)",
-          textShadow: "-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white",
+          textShadow:
+            "-0.8px 0 white, 0 0.8px white, 0.8px 0 white, 0 -0.8px white",
         }}
       >
         {info}

@@ -144,7 +144,8 @@ export default ({ data }) => {
                       Partez à la découverte des Alpes du Sud avec le parc du
                       Mercantour et ses six vallées!
                       <strong>
-                        Randonnées à pieds, à cheval, en VTT toute l’année
+                        Et sur la Côte d'Azur : randonnées à pieds, à cheval, en
+                        VTT toute l’année
                       </strong>{" "}
                       , c’est l’atout majeur de notre région qui vous offre ses
                       paysages somptueux et sa faune unique.

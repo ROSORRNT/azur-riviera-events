@@ -43,7 +43,7 @@ export default ({ data }) => {
       <MainNavigation className="main-header" />
       <StyledHero img={data.seminarBcg.childImageSharp.fluid}>
         <Banner
-          title="évènements d'entreprise"
+          title="evenements d'entreprise"
           info="Une large gamme d’activités, et un interlocuteur unique !"
         >
           <Link to="/entreprises#seminaires" className="button">
@@ -285,7 +285,7 @@ export default ({ data }) => {
                       Nous vous apportons nos idées et concepts pour que les
                       salariés de votre entreprise puissent bénéficier
                       d’activités originales, éthiques et en respect avec vos
-                      valeurs sociétales. .
+                      valeurs sociétales.
                     </p>
                   </div>
                 </div>
@@ -437,14 +437,14 @@ export const query = graphql`
         }
       }
     }
-    comiteEntreprise: file(relativePath: { eq: "comite-entreprise.png" }) {
+    comiteEntreprise: file(relativePath: { eq: "newComite.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    comiteEntrepriseTwo: file(relativePath: { eq: "comite-entreprise2.jpg" }) {
+    comiteEntrepriseTwo: file(relativePath: { eq: "newComiteTwo.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4000) {
           ...GatsbyImageSharpFluid_withWebp

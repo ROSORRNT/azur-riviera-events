@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-const Title = ({ title, subtitle, className }) => {
+const Title = ({ title, subtitle, middle, className }) => {
   return (
     <div className={className}>
       <h4>
         <span className="title">{title}</span>
+        <span style={{ color: "#ffcb3cee" }}>{middle}</span>
+
         <span>{subtitle}</span>
       </h4>
     </div>

@@ -78,7 +78,7 @@ const getAbout = graphql`
         }
       }
     }
-    charteOne: file(relativePath: { eq: "charteOne.jpg" }) {
+    charteOne: file(relativePath: { eq: "newCharte.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
@@ -214,7 +214,7 @@ const About = () => {
               <h2 id="charte" style={{ marginTop: "0" }}>
                 Charte de nos valeurs
               </h2>
-              <Card>
+              <Card style={{ paddingBottom: "1.3rem" }}>
                 <h3 style={{ marginBottom: "0.5rem" }}>
                   Nous portons attention au sens de nos actions.
                 </h3>
@@ -284,7 +284,7 @@ const About = () => {
                   <strong> tous vos projets</strong>.
                 </p>
                 <p>
-                  Nnous avons fidélisé depuis la création de l’agence
+                  Nous avons fidélisé depuis la création de l’agence
                   événementielle,
                   <strong> des professionnels reconnus </strong> pour leur
                   compétence, leur savoir faire et leur disponibilité créant la
@@ -327,7 +327,7 @@ const About = () => {
             </article>
 
             <article id="clients">
-              <h2>Nos Clients</h2>
+              <h2>Quelques uns de nos clients...</h2>
               <Card style={{ marginBottom: "15px" }}>
                 <div className="grid-article-col">
                   <div>

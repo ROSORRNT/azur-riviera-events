@@ -7,6 +7,7 @@ import Title from "./../UIElements/Title"
 import MainNavigation from "../Navigation/MainNavigation"
 import Card from "../UIElements/Card"
 import styles from "./../css/about.module.css"
+import footerStyles from "../css/footer.module.css"
 import Footer from "../UIElements/Footer"
 import VedettePosts from "../Blog/VedettePosts"
 
@@ -75,7 +76,8 @@ const Layout = () => {
             <article className={styles.aboutImg}>
               <Title
                 className={styles.homeTitle}
-                title="Azur Riviera"
+                title="Azur"
+                middle="Riviera"
                 subtitle="Events"
               />
               <h3 className="home--subtitle">
@@ -90,25 +92,20 @@ const Layout = () => {
             </article>{" "}
             <article className={styles.aboutInfo}>
               <Card style={{ marginTop: "1rem" }}>
-                <p className="home--text">
+                <p style={{ fontSize: "1.3rem" }} className="home--text">
                   <strong>AZUR RIVIERA EVENTS</strong> est une agence
                   événementielle et de tourisme basée à NICE depuis 2005.{" "}
                 </p>
-                <p className="home--text">
+                <p style={{ fontSize: "1.3rem" }} className="home--text">
                   <strong> Notre savoir-faire</strong> : créer et concevoir vos
                   événements professionnels ultra-personnalisés pour qu'ils
                   soient à l'image de vos valeurs et de vos objectifs.
                 </p>
-                <p className="home--text">
+                <p style={{ fontSize: "1.3rem" }} className="home--text">
                   Toutes les compétences sont réunies{" "}
                   <strong> au sein d'une même agence</strong>
                   pour vous offrir une panoplie de services autour de
                   l'événementiel, du tourisme et de la communication.
-                </p>
-                <p className="home--text">
-                  Nous vous garantissons des prestations de qualité grâce aux
-                  engagements que nous avons pris avec nos prestataires qui ont
-                  adhéré à la <strong>charte de nos valeurs</strong>.
                 </p>
               </Card>
             </article>
@@ -139,7 +136,7 @@ const Layout = () => {
               </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
-                  <strong>Interlocuteur unique</strong>, expertise, conseil
+                  <strong>Interlocuteur unique</strong>, expertise, conseil.
                 </li>
 
                 <li className="plan__feature">
@@ -206,7 +203,7 @@ const Layout = () => {
               </h2>
               <h3>
                 Séjours et voyages d’affaires et incentive dans la région Sud,
-                Provence, Alpes et Côte d’Azur .
+                Provence, Alpes et Côte d’Azur
               </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
@@ -308,26 +305,26 @@ const Layout = () => {
 
       <Footer>
         <section>
-          <h3>ARTICLES RECENTS</h3>
-          <nav>
-            <ul className="main-footer__links">
-              <li className="main-footer__link article">
-                La motivation, source de bien-être !
-              </li>
-              <li className="main-footer__link article">
-                Un séminaire à la montagne ?
-              </li>
-              <li className="main-footer__link article">
-                Féstivité de fin d'année, besoin d'une idée ?
-              </li>
-              <li className="main-footer__link article">
-                Portes ouvertes Méditeranéennes
-              </li>
-              <li className="main-footer__link article">
-                Conférence et Coupe du monde Féminin 2019
-              </li>
-            </ul>
-          </nav>
+          <div className={footerStyles.links}>
+            <Link to="/legal">MENTIONS LEGALES</Link>
+          </div>
+          <div className={footerStyles.copyright}>
+            <p>
+              45, chemin Collet Baraya - 06670 COLOMARS (NICE) <br />
+              <strong>Tél</strong> : 06 60 61 33 99 <br />
+              <strong>
+                Mail :{" "}
+                <span
+                  style={{
+                    textDecoration: "underline",
+                  }}
+                >
+                  {" "}
+                  patricia@azur-riviera-events.com
+                </span>
+              </strong>
+            </p>
+          </div>
         </section>
       </Footer>
     </React.Fragment>

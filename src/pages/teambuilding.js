@@ -37,7 +37,7 @@ export default ({ data }) => {
       <StyledHero img={data.teambuildingBcg.childImageSharp.fluid}>
         <Banner
           color={"var(--lightBlue)"}
-          title="ÉVÈNEMENTS COHÉSION D'ÉQUIPE"
+          title="EVENEMENTS COHESION D'EQUIPE"
           info="Pour divertir, fédérer, et sensibiliser vos équipes."
         >
           <Link to="/teambuilding#sport-culture" className="button">
@@ -60,10 +60,17 @@ export default ({ data }) => {
               <p>
                 <FaPenAlt /> Vous apporter nos idées pour{" "}
                 <strong> stimuler</strong> vos équipes professionnelles et
-                répondre à vos défis
+                répondre à vos défis.
+              </p>
+              <p>
+                Voir
                 <span>
-                  <Link to="/faq">voir notre FAQ.</Link>
-                </span>
+                  <Link to="/faq"> notre FAQ</Link>
+                </span>{" "}
+                ou télécharger{" "}
+                <a href="https://drive.google.com/u/0/uc?id=1thf8pjtRT_1rmTRQOpQlicL9cdZ7onXl&export=download">
+                  le catalogue de nos activitées.
+                </a>
               </p>
             </Card>
             <br />
@@ -501,7 +508,7 @@ export const query = graphql`
         }
       }
     }
-    terrainJeu: file(relativePath: { eq: "default-3.jpeg" }) {
+    terrainJeu: file(relativePath: { eq: "gala.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -571,14 +578,14 @@ export const query = graphql`
         }
       }
     }
-    sportOne: file(relativePath: { eq: "sportOne.jpg" }) {
+    sportOne: file(relativePath: { eq: "fOne.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    cultureOne: file(relativePath: { eq: "culturaOne.jpg" }) {
+    cultureOne: file(relativePath: { eq: "voileOne.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
