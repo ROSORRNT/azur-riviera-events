@@ -103,7 +103,7 @@ const Layout = () => {
                 </p>
                 <p style={{ fontSize: "1.3rem" }} className="home--text">
                   Toutes les compétences sont réunies{" "}
-                  <strong> au sein d'une même agence</strong>
+                  <strong> au sein d'une même agence </strong>
                   pour vous offrir une panoplie de services autour de
                   l'événementiel, du tourisme et de la communication.
                 </p>

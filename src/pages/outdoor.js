@@ -105,10 +105,11 @@ export default ({ data }) => {
                   <div>
                     <h4 style={{ textAlign: "center" }}>
                       {" "}
-                      Sécurité, expérience, accompagnement, coûts maîtrisés :
+                      Sécurité, expérience, accompagnement, coûts maîtrisés,
+                      sont
                     </h4>
                     <p>
-                      Des objectifs qui sont pour nous{" "}
+                      des objectifs qui sont pour nous{" "}
                       <strong>incontournables</strong>.
                     </p>
                     <p>

@@ -122,15 +122,6 @@ export default ({ data }) => {
                       assister tout au long de la préparation et être à vos
                       côtés le jour J.
                     </p>
-                    <p>
-                      Nos activités de cohésion d’équipes{" "}
-                      <strong> (team building ou team learning)</strong> vous
-                      sont aussi proposées pour agrémenter votre séminaire. Il
-                      est aujourd’hui incontournable pour mieux se connaître, de
-                      participer à ces animations ludiques, sportives ou
-                      culturelles dans le cadre de réunion avec vos
-                      collaborateurs ou vos clients.
-                    </p>
                   </div>
                   <div className="activities__image">
                     <Img
@@ -159,7 +150,7 @@ export default ({ data }) => {
                       {" "}
                       <strong>
                         {" "}
-                        Les ingrédients d’un séminaire réussi
+                        Les ingrédients d’une conférence réussie
                       </strong>{" "}
                     </h3>
                     <h4 style={{ textAlign: "justify" }}>

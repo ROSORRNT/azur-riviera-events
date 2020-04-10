@@ -16,26 +16,11 @@ const Blog = ({ data }) => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
+        console.log(node)
         return (
           <img width="700" src={node.data.target.fields.file["en-US"].url} />
         )
       },
-      // "embedded-entry-block": node => {
-      //   const { title, images, description } = node.data.target.fields
-      //   return (
-      //     <div>
-      //       <br />
-      //       <br />
-      //       <br />
-      //       <br />
-      //       <h1>Mon autre poste : {title["en-US"]}</h1>
-      //       <br />
-      //       <br />
-      //       <br />
-      //       <br />
-      //     </div>
-      //   )
-      // },
     },
   }
 
