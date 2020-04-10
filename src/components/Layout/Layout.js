@@ -41,14 +41,14 @@ const getImages = graphql`
         }
       }
     }
-    sport: file(relativePath: { eq: "sport.jpg" }) {
+    sport: file(relativePath: { eq: "activities.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    culture: file(relativePath: { eq: "culture.jpg" }) {
+    culture: file(relativePath: { eq: "voyageAffaire.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -232,17 +232,6 @@ const Layout = () => {
           <ul className="key-feature__list">
             <li className="key-feature">
               <div className="key-feature__image">
-                <Link to="/teambuilding#sport-culture">
-                  <Img
-                    style={{ borderRadius: "50%" }}
-                    fluid={data.fluid.childImageSharp.fluid}
-                  />
-                </Link>
-              </div>
-              <p className="key-feature__description">Sport et Culture</p>
-            </li>
-            <li className="key-feature">
-              <div className="key-feature__image">
                 <Link to="/outdoor">
                   <Img
                     style={{ borderRadius: "50%" }}
@@ -268,25 +257,37 @@ const Layout = () => {
                 <Link to="/teambuilding#ateliers">
                   <Img
                     style={{ borderRadius: "50%" }}
-                    fluid={data.culture.childImageSharp.fluid}
-                  />
-                </Link>
-              </div>
-              <p className="key-feature__description">
-                Découvertes Culturelles
-              </p>
-            </li>
-            <li className="key-feature">
-              <div className="key-feature__image">
-                <Link to="/outdoor#vtt-rally-regate">
-                  <Img
-                    style={{ borderRadius: "50%" }}
                     fluid={data.sport.childImageSharp.fluid}
                   />
                 </Link>
               </div>
-              <p className="key-feature__description">Activités Sportives</p>
+              <p className="key-feature__description">
+                Activités Team building
+              </p>
             </li>
+            <li className="key-feature">
+              <div className="key-feature__image">
+                <Link to="/outdoor#voyage-incentive">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.culture.childImageSharp.fluid}
+                  />
+                </Link>
+              </div>
+              <p className="key-feature__description">Tourisme d’affaire </p>
+            </li>
+            <li className="key-feature">
+              <div className="key-feature__image">
+                <Link to="/teambuilding#sport-culture">
+                  <Img
+                    style={{ borderRadius: "50%" }}
+                    fluid={data.fluid.childImageSharp.fluid}
+                  />
+                </Link>
+              </div>
+              <p className="key-feature__description">Sport et Culture</p>
+            </li>
+
             <li className="key-feature">
               <div className="key-feature__image">
                 <Link to="/entreprises#transport">
@@ -296,7 +297,7 @@ const Layout = () => {
                   />
                 </Link>
               </div>
-              <p className="key-feature__description">Yatching</p>
+              <p className="key-feature__description">Transport</p>
             </li>
           </ul>
         </section>
