@@ -13,7 +13,7 @@ export default ({ data }) => {
       <MainNavigation />
       <StyledHero img={data.strongPoints.childImageSharp.fluid}>
         <Banner title="Points Forts">
-          <Link to="/strongpoints#moreEq" className="button">
+          <Link to="/strongpointsout#moreOut" className="button">
             Voir plus
           </Link>
         </Banner>

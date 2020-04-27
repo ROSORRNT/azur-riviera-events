@@ -27,7 +27,7 @@ const PointFortEQ = () => {
 
   return (
     <React.Fragment>
-      <section id="moreEq" style={{ marginBottom: "3rem" }}>
+      <section id="moreCo" style={{ marginBottom: "3rem" }}>
         {" "}
         <Title title="cohesion" subtitle="d'equipes" />
         <article className={styles.aboutCenter} style={{ marginTop: "0" }}>
