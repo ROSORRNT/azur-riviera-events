@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import MainNavigation from "../components/Navigation/MainNavigation"
-import PointFortEQ from "../components/UIElements/PointFortEq"
+import PointFortCo from "../components/UIElements/PointFortCo"
 import Banner from "../components/UIElements/Banner"
 import StyledHero from "../components/UIElements/StyledHero"
 import "../components/css/layout.css"
@@ -18,7 +18,7 @@ export default ({ data }) => {
           </Link>
         </Banner>
       </StyledHero>
-      <PointFortEQ />
+      <PointFortCo />
     </React.Fragment>
   )
 }

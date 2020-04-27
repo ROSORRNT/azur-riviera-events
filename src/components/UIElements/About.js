@@ -78,7 +78,7 @@ const getAbout = graphql`
         }
       }
     }
-    charteOne: file(relativePath: { eq: "newCharte.jpg" }) {
+    charteOne: file(relativePath: { eq: "charteTst.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid

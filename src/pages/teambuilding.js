@@ -27,7 +27,7 @@ export default ({ data }) => {
       </li>
 
       <li>
-        <Link to="/strongpoints">Points forts</Link>
+        <Link to="/strongpointsco">Points forts</Link>
       </li>
     </React.Fragment>
   )
@@ -37,7 +37,7 @@ export default ({ data }) => {
       <StyledHero img={data.teambuildingBcg.childImageSharp.fluid}>
         <Banner
           color={"var(--lightBlue)"}
-          title="EVENEMENTS COHESION D'EQUIPE"
+          title="EVENEMENTS COHESION D'EQUIPES"
           info="Pour divertir, fédérer, et sensibiliser vos équipes."
         >
           <Link to="/teambuilding#sport-culture" className="button">

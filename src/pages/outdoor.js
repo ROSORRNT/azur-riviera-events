@@ -31,7 +31,7 @@ export default ({ data }) => {
         <Link to="/outdoor#canyonning">Canyonning, Rafting, Parapente</Link>
       </li>
       <li>
-        <Link to="/strongpoints">Points forts</Link>
+        <Link to="/strongpointsout">Points forts</Link>
       </li>
     </React.Fragment>
   )

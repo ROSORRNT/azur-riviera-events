@@ -122,7 +122,7 @@ const Layout = () => {
           <div className="plan__list">
             <article className="plan plan--highlighted__enterprises">
               <h1 className="plan__title--dark plan--shadow">
-                EVENEMENTS ENTREPRISES
+                EVENEMENTS ENTREPRISE
               </h1>
               <h2 className="plan__annotation">
                 Séminaire Conférence <br />
@@ -132,7 +132,9 @@ const Layout = () => {
               </h2>
               <h3>
                 Nous sommes à vos côtés pour une organisation optimale et
-                personnalisée{" "}
+                personnalisée . Vous bénéficiez de notre réseau de partenaires
+                rigoureusement sélectionnés pour leur éthique, en matière de
+                sécurité, de respect des prix et des délais.
               </h3>
               <ul className="plan__features">
                 <li className="plan__feature">
@@ -194,7 +196,7 @@ const Layout = () => {
 
             <article className="plan plan--highlighted__outdoor">
               <h1 className="plan__title--dark plan--shadow">
-                VOYAGE ET DECOUVERTE
+                VOYAGES ET DECOUVERTES
               </h1>
               <h2 className="plan__annotation">
                 {" "}

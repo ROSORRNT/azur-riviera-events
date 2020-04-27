@@ -14,12 +14,12 @@ const NavLinks = () => {
       </li>
       <li>
         <AniLink fade to="/teambuilding" activeClassName="active">
-          Cohésion d'équipe
+          Cohésion d'équipes
         </AniLink>
       </li>
       <li>
         <AniLink fade to="/outdoor" activeClassName="active">
-          Voyage et découvertes
+          Voyages et découvertes
         </AniLink>
       </li>
       <li>
