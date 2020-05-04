@@ -63,11 +63,7 @@ export default ({ data }) => {
                 répondre à vos défis.
               </p>
               <p>
-                Voir
-                <span>
-                  <Link to="/faq"> notre FAQ</Link>
-                </span>{" "}
-                ou télécharger{" "}
+                Télécharger{" "}
                 <a href="https://drive.google.com/u/0/uc?id=1thf8pjtRT_1rmTRQOpQlicL9cdZ7onXl&export=download">
                   le catalogue de nos activitées.
                 </a>

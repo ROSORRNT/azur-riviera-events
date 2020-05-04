@@ -38,7 +38,7 @@ const Footer = ({ children }) => {
           <div className="center">
             <h3>NEWSLETTER</h3>
             <form
-              action="https://formspree.io/patricia@azur-riviera-events.com"
+              action="https://formspree.io/lebras.patricia@gmail.com"
               method="POST"
               className="center"
             >

@@ -29,7 +29,7 @@ export default ({ data }) => {
             <p>
               45, chemin Collet Baraya - 06670 COLOMARS (NICE) <br />
               <strong>Tél</strong> : 06 60 61 33 99 <br />
-              <strong>Mail</strong> : patricia@azur-riviera-events.com
+              <strong>Mail</strong> : lebras.patricia@gmail.com
             </p>
           </div>
         </section>

@@ -66,10 +66,6 @@ export default ({ data }) => {
               <p>
                 <FaPenAlt /> Vous préparer un programme sur mesure pour{" "}
                 <strong>vos voyages d’affaire en France et à l’étranger</strong>
-                <span>
-                  {" "}
-                  <Link to="/faq">voir notre FAQ.</Link>
-                </span>
               </p>
             </Card>
 

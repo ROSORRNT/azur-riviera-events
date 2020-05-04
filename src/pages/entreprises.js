@@ -69,11 +69,7 @@ export default ({ data }) => {
               </p>
               <p>
                 <FaCommentDots /> Vous assister pour mettre en place votre
-                communication digitale et donner du sens à votre événement. .
-                Pour plus d'infos{" "}
-                <span>
-                  <Link to="/faq">voir notre FAQ.</Link>
-                </span>{" "}
+                communication digitale et donner du sens à votre événement.
               </p>
             </Card>
 
@@ -89,19 +85,15 @@ export default ({ data }) => {
                     />{" "}
                   </div>
                   <div>
-                    <h3>
-                      {" "}
-                      <strong>
-                        {" "}
-                        Les ingrédients d’un séminaire réussi
-                      </strong>{" "}
-                    </h3>
+                    <h4 style={{ textAlign: "center", fontSize: "1.1rem" }}>
+                      Les ingrédients d’un séminaire réussi :{" "}
+                    </h4>
+                    {""}
                     <h4 style={{ textAlign: "center" }}>
-                      {" "}
                       <FaArrowAltCircleRight /> Lieux, choix des prestataires,
                       déroulé et logistique, accompagnement{" "}
                     </h4>
-                    <p>
+                    <p style={{ textAlign: "left" }}>
                       Nous sommes auprès de<strong> nos clients</strong> pour{" "}
                       <strong>
                         créer, concevoir et coordonner leur séminaire
@@ -146,13 +138,13 @@ export default ({ data }) => {
                     />{" "}
                   </div>
                   <div>
-                    <h3>
+                    <h4 style={{ textAlign: "center", fontSize: "1.1rem" }}>
                       {" "}
                       <strong>
                         {" "}
-                        Les ingrédients d’une conférence réussie
+                        Les ingrédients d’une conférence réussie :
                       </strong>{" "}
-                    </h3>
+                    </h4>
                     <h4 style={{ textAlign: "justify" }}>
                       {" "}
                       <FaArrowAltCircleRight /> Excellente connaissance des
