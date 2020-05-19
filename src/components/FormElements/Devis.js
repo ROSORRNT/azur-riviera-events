@@ -9,7 +9,7 @@ const Devis = ({ children }) => {
       {children}
       <div style={{ marginTop: "1rem" }} className={styles.center}>
         <form
-          action="https://formspree.io/lebras.patricia@gmail.com"
+          action="https://formspree.io/patricia@azur-riviera-events.com"
           method="POST"
           className={styles.center}
         >

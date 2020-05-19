@@ -323,7 +323,7 @@ const Layout = () => {
                   }}
                 >
                   {" "}
-                  lebras.patricia@gmail.com
+                  patricia@azur-riviera-events.com
                 </span>
               </strong>
             </p>
